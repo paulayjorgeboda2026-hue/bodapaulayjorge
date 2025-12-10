@@ -72,3 +72,39 @@ footer {
     background-color: #b0836f;
 }
 
+.song-request {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fef7f5; /* color de fondo suave */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.song-request h2 {
+    color: #b0836f;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.song-request p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.song-request a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #d7b7a8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.song-request a:hover {
+    background-color: #b0836f;
+}
