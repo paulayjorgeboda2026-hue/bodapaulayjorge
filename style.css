@@ -44,4 +44,31 @@ footer {
     margin-top: 40px;
 }
 
+.map-section {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.map-section .map-location {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #b0836f; /* color bonito, puedes cambiarlo */
+}
+
+.map-section .map-link a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #d7b7a8; /* color del botón */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.map-section .map-link a:hover {
+    background-color: #b0836f;
+}
 
