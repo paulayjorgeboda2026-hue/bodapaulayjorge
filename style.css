@@ -173,5 +173,11 @@ footer {
     margin: 20px auto;
   
 }
+.container {
+    max-width: 1000px;  /* Ancho máximo de la web */
+    margin: 0 auto;     /* Centrado horizontal */
+    padding: 0 20px;    /* Espacio a los lados en pantallas pequeñas */
+    text-align: center; /* Centra todo el texto por defecto */
+}
 
 }
