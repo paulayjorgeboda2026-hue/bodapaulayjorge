@@ -217,7 +217,7 @@ footer {
 #preboda .section-image {
     width: 80%;            /* Reduce el ancho al 80% del contenedor */
     max-width: 300px;      /* Máximo tamaño */
-    height: auto;          /* Mantiene proporción */
+    height: 120%;          /* Mantiene proporción */
     display: block;
     margin: 20px auto;     /* Centrado y espacio arriba/abajo */
 }
