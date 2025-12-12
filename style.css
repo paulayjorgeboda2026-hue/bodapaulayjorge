@@ -165,3 +165,12 @@ footer {
 .asistencia-link a:hover {
     background-color: #8d6858;
 }
+
+.section-image {
+    width: 100%;
+    max-width: 700px; /* Tamaño máximo para que no se haga gigante */
+    display: block;
+    margin: 20px auto; /* Centra la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra ligera */
+}
