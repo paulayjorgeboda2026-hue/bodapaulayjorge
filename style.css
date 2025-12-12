@@ -222,7 +222,7 @@ footer {
     margin: 20px auto;     /* Centrado y espacio arriba/abajo */
 }
 .boda-col .section-image {
-    width: 350px;
+    width: 450px;
     height: 350px;
     object-fit: cover;
     display: block;
