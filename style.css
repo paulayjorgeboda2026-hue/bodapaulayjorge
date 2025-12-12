@@ -189,5 +189,30 @@ footer {
     margin: 20px auto;   /* Centrado horizontal */
     max-width: 500px;    /* Ajusta el tamaño máximo */
 }
+.boda-columnas {
+    display: flex;            /* Hace las columnas lado a lado */
+    flex-wrap: wrap;          /* Para que en móviles se apilen */
+    justify-content: center;  /* Centra todo horizontalmente */
+    gap: 40px;                /* Espacio entre columnas */
+    margin-top: 20px;
+}
+
+.boda-col {
+    flex: 1 1 300px;          /* Cada columna ocupa mínimo 300px y crece */
+    max-width: 400px;         /* Ancho máximo de cada columna */
+    text-align: center;       /* Centra el contenido dentro de la columna */
+}
+
+.boda-col .section-image {
+    width: 100%;
+    max-width: 350px;         /* Tamaño máximo de la imagen */
+    display: block;
+    margin: 0 auto;           /* Centra la imagen dentro de la columna */
+}
+
+.pie-imagen {
+    font-style: italic;
+    margin: 10px 0 5px 0;
+}
 
 }
