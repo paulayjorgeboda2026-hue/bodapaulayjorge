@@ -224,7 +224,7 @@ footer {
 .boda-col .section-image {
     width: 450px;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
 }
@@ -243,23 +243,5 @@ footer {
 .boda-col {
     flex: 0 0 450px;  /* Cada columna ocupa exactamente lo necesario */
 }
-.boda-columnas {
-    display: flex;
-    justify-content: center; /* Centra el bloque en la página */
-    gap: 80px;               /* Espacio entre las dos columnas */
-    flex-wrap: wrap;         /* Permite bajar columnas en pantallas pequeñas */
-}
 
-.boda-col {
-    display: flex;
-    flex-direction: column;  /* Imagen arriba, texto debajo */
-    align-items: center;     /* Centra contenido dentro de la columna */
-    max-width: 450px;        /* Mantiene ancho de las fotos */
 }
-
-.boda-col .section-image {
-    width: 100%;             /* Usa todo el ancho de la columna */
-    height: auto;            /* Mantiene proporción original */
-}
-
-}}
