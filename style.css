@@ -76,8 +76,6 @@ body {
     margin: 20px auto;
     width: 100%;
     height: auto;
-    object-fit: contain; /* Muestra la imagen completa sin recortes */
-    max-width: 600px;    /* Ajusta tamaño máximo para la boda */
 }
 
 /* Boda - columnas */
@@ -91,7 +89,12 @@ body {
 .boda-col {
     flex: 1 1 400px; /* mínimo 400px, puede crecer */
     text-align: center;
-    max-width: none;  /* elimina limitación de ancho */
+    max-width: 450px; /* limitamos ancho para columnas */
+}
+.boda-col .section-image {
+    width: 100%;
+    height: auto;       /* mantiene proporción */
+    object-fit: cover;  /* llena la columna sin deformar */
 }
 
 /* Pie de imagen */
