@@ -214,5 +214,12 @@ footer {
     font-style: italic;
     margin: 10px 0 5px 0;
 }
+#preboda .section-image {
+    width: 80%;            /* Reduce el ancho al 80% del contenedor */
+    max-width: 300px;      /* Máximo tamaño */
+    height: auto;          /* Mantiene proporción */
+    display: block;
+    margin: 20px auto;     /* Centrado y espacio arriba/abajo */
+}
 
 }
