@@ -234,5 +234,14 @@ footer {
     display: block;
     margin: 20px auto;
 }
+.boda-columnas {
+    display: flex;
+    justify-content: center;
+    gap: 100px;   /* Espacio ideal para fotos grandes */
+}
+
+.boda-col {
+    flex: 0 0 450px;  /* Cada columna ocupa exactamente lo necesario */
+}
 
 }
