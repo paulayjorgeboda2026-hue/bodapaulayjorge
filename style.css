@@ -221,5 +221,18 @@ footer {
     display: block;
     margin: 20px auto;     /* Centrado y espacio arriba/abajo */
 }
+.boda-col .section-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+#preboda .section-image {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
 
 }
