@@ -205,7 +205,7 @@ footer {
 
 .boda-col .section-image {
     width: 100%;
-    max-width: 350px;         /* Tamaño máximo de la imagen */
+    max-width: 4000px;         /* Tamaño máximo de la imagen */
     display: block;
     margin: 0 auto;           /* Centra la imagen dentro de la columna */
 }
