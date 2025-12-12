@@ -193,7 +193,7 @@ footer {
     display: flex;            /* Hace las columnas lado a lado */
     flex-wrap: wrap;          /* Para que en móviles se apilen */
     justify-content: center;  /* Centra todo horizontalmente */
-    gap: 40px;                /* Espacio entre columnas */
+    gap: 80px;                /* Espacio entre columnas */
     margin-top: 20px;
 }
 
