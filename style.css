@@ -168,9 +168,11 @@ footer {
 
 .section-image {
     width: 100%;
-    max-width: 700px; /* Tamaño máximo para que no se haga gigante */
+    max-width: 500px;
     display: block;
-    margin: 20px auto; /* Centra la imagen */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra ligera */
+    margin: 20px auto;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 10px rgba(0,0,0,0.15); */
+}
+
 }
