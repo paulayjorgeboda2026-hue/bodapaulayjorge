@@ -6,117 +6,84 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
 
-        <!-- Menú -->
-        <header class="menu">
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#preboda">Preboda</a></li>
-                    <li><a href="#boda">Boda</a></li>
-                    <li><a href="#llegar">Cómo llegar</a></li>
-                    <li><a href="#asistencia">Asistencia</a></li>
-                    <li><a href="#musica">Canciones</a></li>
-                    <li><a href="#contador">Cuenta atrás</a></li>
-                </ul>
-            </nav>
-        </header>
+<div class="container">
 
-        <!-- Hero -->
-        <header class="hero">
-            <h1>Paula & Jorge</h1>
-            <p>12 Septiembre 2026</p>
-        </header>
+    <!-- Menú -->
+    <header class="menu">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#preboda">Preboda</a></li>
+                <li><a href="#boda">Boda</a></li>
+                <li><a href="#llegar">Cómo llegar</a></li>
+                <li><a href="#asistencia">Asistencia</a></li>
+                <li><a href="#musica">Canciones</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Introducción -->
-        <section class="section-box" id="inicio">
-            <h2>¡NOS CASAMOS!</h2>
-            <p>Aquí puedes escribir algo bonito sobre vosotros.</p>
-        </section>
+    <!-- Hero -->
+    <header class="hero">
+        <h1>Paula & Jorge</h1>
+        <p>12 Septiembre 2026</p>
+    </header>
 
-        <!-- Preboda -->
-        <section id="preboda" class="section-box">
-            <h2>PREBODA</h2>
-            <p>Os esperamos el viernes 11 de septiembre de 2026.</p>
-            <p>20:00 — Hotel Miralrío (Cacabelos)</p>
-            <img src="miralrío.png" alt="Foto preboda" class="section-image">
-        </section>
+    <!-- Inicio -->
+    <section id="inicio" class="section-box">
+        <h2>¡NOS CASAMOS!</h2>
+        <p>Aquí puedes escribir algo bonito sobre vosotros.</p>
+    </section>
 
-        <!-- Boda -->
-        <section id="boda" class="section-box">
-            <h2>BODA</h2>
-            <p>Detalles y recuerdos del día más especial de nuestras vidas. A continuación te mostramos los lugares principales del día con la hora correspondiente.</p>
+    <!-- Preboda -->
+    <section id="preboda" class="section-box">
+        <h2>PREBODA</h2>
+        <p>Os esperamos el viernes 11 de septiembre de 2026.</p>
+        <p>20:00 — Hotel Miralrío (Cacabelos)</p>
+        <img src="miralrío.png" alt="Preboda" class="section-image">
+    </section>
 
-            <div class="boda-columnas">
+    <!-- Boda -->
+    <section id="boda" class="section-box">
+        <h2>BODA</h2>
+        <p>
+            Detalles y recuerdos del día más especial de nuestras vidas.
+            A continuación te mostramos los lugares principales del día con la hora correspondiente.
+        </p>
 
-                <!-- Ceremonia -->
-                <div class="boda-col">
-                    <img src="angustias blanco y negro png.png" alt="Ceremonia" class="section-image">
-                    <p class="pie-imagen">17:00 — Ceremonia</p>
-                    <p>
-                        <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia/@42.6003726,-6.7338197,17z" target="_blank">
-                            Santuario de la Quinta Angustia
-                        </a>
-                    </p>
+        <div class="boda-columnas">
+
+            <!-- Ceremonia -->
+            <div class="boda-col">
+                <div class="boda-img-wrapper">
+                    <img src="angustias blanco y negro png.png" alt="Ceremonia">
                 </div>
-
-                <!-- Celebración -->
-                <div class="boda-col">
-                    <img src="Canedo final png.png" alt="Recepción" class="section-image">
-                    <p class="pie-imagen">19:00 — Celebración</p>
-                    <p>
-                        <a href="https://pradaatope.com.es/" target="_blank">
-                            Palacio de Canedo
-                        </a>
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Cómo llegar -->
-        <section id="llegar" class="section-box map-section">
-            <h2>Cómo llegar</h2>
-            <p class="map-location">Cacabelos (León)</p>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11007.1234567890!2d-6.7351623!3d42.5986974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30be6d0d3d13cf:0xa9e9860024e5292d!2s24540+Cacabelos,+Le%C3%B3n!5e0!3m2!1ses!2ses!4v0000000000000" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-            <p class="map-link">
-                <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/@42.5986974,-6.7351623,15z" target="_blank">
-                    Abrir en Google Maps
+                <p class="pie-imagen">17:00 — Ceremonia</p>
+                <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia" target="_blank">
+                    Santuario de la Quinta Angustia
                 </a>
-            </p>
-        </section>
+            </div>
 
-        <!-- Confirmación -->
-        <section id="asistencia" class="section-box">
-            <h2>Confirmación de asistencia</h2>
-            <p>Por favor, rellena este formulario para confirmar tu asistencia.</p>
-            <p class="asistencia-link">
-                <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank">Rellenar formulario</a>
-            </p>
-        </section>
+            <!-- Celebración -->
+            <div class="boda-col">
+                <div class="boda-img-wrapper">
+                    <img src="Canedo final png.png" alt="Celebración">
+                </div>
+                <p class="pie-imagen">19:00 — Celebración</p>
+                <a href="https://pradaatope.com.es/" target="_blank">
+                    Palacio de Canedo
+                </a>
+            </div>
 
-        <!-- Música -->
-        <section id="musica" class="section-box song-request">
-            <h2>Ayúdanos con la música</h2>
-            <p>Cuéntanos qué canciones te gustaría que suenen en nuestra boda.</p>
-            <p>
-                <a href="https://forms.gle/PJSDJ1ixuKXTJE9g9" target="_blank">Sugerir una canción</a>
-            </p>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>Con cariño, Paula & Jorge ❤️</p>
-        </footer>
+    <!-- Footer -->
+    <footer>
+        <p>Con cariño, Paula & Jorge ❤️</p>
+    </footer>
 
-    </div>
+</div>
+
 </body>
 </html>
