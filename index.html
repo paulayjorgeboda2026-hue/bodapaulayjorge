@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <title>Paula & Jorge — Nuestra Boda</title>
 
-    <!-- Fuentes -->
+    <!-- Fuente manuscrita -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- MENÚ FIJO REAL -->
+<!-- MENÚ FIJO -->
 <header class="menu">
     <nav>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#contador">Cuenta atrás</a></li>
             <li><a href="#preboda">Preboda</a></li>
             <li><a href="#boda">Boda</a></li>
-            <li><a href="#contador">Cuenta atrás</a></li>
             <li><a href="#llegar">Cómo llegar</a></li>
             <li><a href="#asistencia">Asistencia</a></li>
             <li><a href="#musica">Canciones</a></li>
@@ -32,6 +32,17 @@
     <section class="hero fade-in" id="inicio">
         <h1 class="hero-names">Paula & Jorge</h1>
         <p>12 de septiembre de 2026</p>
+    </section>
+
+    <!-- CUENTA ATRÁS -->
+    <section id="contador" class="section-box fade-in">
+        <h2>Cuenta atrás</h2>
+        <div id="countdown">
+            <div><span id="days"></span>Días</div>
+            <div><span id="hours"></span>Horas</div>
+            <div><span id="minutes"></span>Minutos</div>
+            <div><span id="seconds"></span>Segundos</div>
+        </div>
     </section>
 
     <!-- PREBODA -->
@@ -53,9 +64,11 @@
                     <img src="angustias blanco y negro png.png" alt="Ceremonia">
                 </div>
                 <p class="pie-imagen">17:00 · Ceremonia</p>
-                <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia" target="_blank">
-                    Santuario de la Quinta Angustia
-                </a>
+                <p>
+                    <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia" target="_blank" class="btn">
+                        Santuario de la Quinta Angustia
+                    </a>
+                </p>
             </div>
 
             <div class="boda-col">
@@ -63,22 +76,13 @@
                     <img src="Canedo final png.png" alt="Celebración">
                 </div>
                 <p class="pie-imagen">19:00 · Celebración</p>
-                <a href="https://pradaatope.com.es/" target="_blank">
-                    Palacio de Canedo
-                </a>
+                <p>
+                    <a href="https://pradaatope.com.es/" target="_blank" class="btn">
+                        Palacio de Canedo
+                    </a>
+                </p>
             </div>
 
-        </div>
-    </section>
-
-    <!-- CUENTA ATRÁS -->
-    <section id="contador" class="section-box fade-in">
-        <h2>Cuenta atrás</h2>
-        <div id="countdown">
-            <div><span id="days"></span>Días</div>
-            <div><span id="hours"></span>Horas</div>
-            <div><span id="minutes"></span>Minutos</div>
-            <div><span id="seconds"></span>Segundos</div>
         </div>
     </section>
 
@@ -87,7 +91,7 @@
         <h2>Cómo llegar</h2>
 
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.27628659664!2d-6.7349024!3d42.5994325"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30be6d0d3d13cf:0xa9e9860024e5292d!2s24540+Cacabelos,+Le%C3%B3n!5e0!3m2!1ses!2ses!4v0000000000000"
             width="100%" 
             height="300" 
             style="border:0;" 
@@ -96,7 +100,7 @@
         </iframe>
 
         <p>
-            <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/" target="_blank">
+            <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/" target="_blank" class="btn">
                 Abrir en Google Maps
             </a>
         </p>
@@ -105,8 +109,8 @@
     <!-- ASISTENCIA -->
     <section id="asistencia" class="section-box destacado fade-in">
         <h2>Confirmación de asistencia</h2>
-        <p>Por favor, confirma tu asistencia en el siguiente enlace.</p>
-        <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank">
+        <p>Por favor, confirma tu asistencia.</p>
+        <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank" class="btn">
             Confirmar asistencia
         </a>
     </section>
@@ -115,7 +119,7 @@
     <section id="musica" class="section-box destacado fade-in">
         <h2>Ayúdanos con la música</h2>
         <p>¿Qué canción no puede faltar?</p>
-        <a href="https://forms.gle/PJSDJ1ixuKXTJE9g9" target="_blank">
+        <a href="https://forms.gle/PJSDJ1ixuKXTJE9g9" target="_blank" class="btn">
             Sugerir canción
         </a>
     </section>
@@ -129,7 +133,6 @@
 
 <!-- JS -->
 <script>
-/* CUENTA ATRÁS */
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
 
 setInterval(() => {
@@ -149,7 +152,4 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-</script>
-
-</body>
-</html>
+</scrip
