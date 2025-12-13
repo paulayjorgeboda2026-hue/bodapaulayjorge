@@ -46,12 +46,11 @@ body {
 /* HERO */
 .hero {
     height: 60vh;
-    background: url("tu-foto.jpg") center / cover no-repeat;
+    background: #b0836f;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
 
 .hero-names {
@@ -73,8 +72,8 @@ body {
 
 /* IMÁGENES */
 .section-image {
-    width: 45%;
-    max-width: 400px;
+    width: 50%;
+    max-width: 320px;
     margin-top: 20px;
 }
 
@@ -111,7 +110,8 @@ body {
 /* BOTONES */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    margin-top: 10px;
+    padding: 10px 22px;
     background-color: #d7b7a8;
     color: white;
     text-decoration: none;
