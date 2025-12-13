@@ -1,17 +1,17 @@
 body {
     margin: 0;
     font-family: Georgia, serif;
-    background: linear-gradient(#faf7f2, #fdfbf8);
+    background: #faf7f2;
     color: #333;
 }
 
-/* MENÚ FIJO REAL */
+/* MENÚ FIJO */
 .menu {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: #d7b7a8;
     z-index: 1000;
-    background: #d7b7a8;
 }
 
 .menu ul {
@@ -27,12 +27,11 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 14px;
-    transition: background 0.3s;
+    padding: 10px 15px;
 }
 
 .menu a:hover {
-    background: #b0836f;
+    background-color: #b0836f;
     border-radius: 5px;
 }
 
@@ -40,7 +39,7 @@ body {
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 120px 20px 0; /* espacio por menú fijo */
+    padding: 120px 20px 0;
     text-align: center;
 }
 
@@ -52,29 +51,37 @@ body {
     flex-direction: column;
     justify-content: center;
     color: white;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
 
 .hero-names {
     font-family: 'Great Vibes', cursive;
-    font-size: 4.5rem;
+    font-size: 4rem;
 }
 
 /* SECCIONES */
 .section-box {
-    margin: 70px auto;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
 }
 
-/* PREBODA */
-#preboda .section-image {
+.section-box h2 {
+    color: #b0836f;
+    font-size: 2rem;
+}
+
+/* IMÁGENES */
+.section-image {
     width: 45%;
     max-width: 400px;
+    margin-top: 20px;
 }
 
 /* BODA */
 .boda-columnas {
     display: flex;
-    gap: 60px;
+    gap: 50px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -96,35 +103,59 @@ body {
     object-fit: contain;
 }
 
-/* CUENTA ATRÁS */
-#countdown {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 600px;
-    margin: auto;
+.pie-imagen {
+    font-style: italic;
+    margin: 10px 0;
 }
 
-#countdown span {
-    display: block;
-    font-size: 2.2rem;
-    color: #b0836f;
+/* BOTONES */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d7b7a8;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #b0836f;
 }
 
 /* DESTACADOS */
 .destacado {
-    background: #fef1ed;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    background-color: #fef7f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* MAPA */
+.map-section iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* CUENTA ATRÁS */
+#countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#countdown span {
+    font-size: 2rem;
+    color: #b0836f;
+    display: block;
 }
 
 /* FOOTER */
 footer {
-    background: #d7b7a8;
+    background-color: #d7b7a8;
     color: white;
     padding: 20px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 /* ANIMACIONES */
@@ -143,6 +174,10 @@ footer {
 @media (max-width: 768px) {
     #countdown {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-image {
+        width: 80%;
     }
 
     .hero-names {
