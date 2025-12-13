@@ -13,42 +13,44 @@ body {
 }
 
 /* Menú */
-.menu nav ul {
+.menu ul {
     list-style: none;
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #d7b7a8;
-    margin: 0;
+    background: #d7b7a8;
 }
-.menu nav ul li a {
-    text-decoration: none;
+
+.menu a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
-    display: inline-block;
+    padding: 12px 16px;
 }
-.menu nav ul li a:hover {
-    background-color: #b0836f;
+
+.menu a:hover {
+    background: #b0836f;
     border-radius: 5px;
 }
 
 /* Hero */
 .hero {
-    background: url('tu-foto.jpg') center/cover no-repeat;
     height: 60vh;
+    background: url("tu-foto.jpg") center / cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     color: white;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
+
 .hero h1 {
     font-size: 3.5rem;
     margin: 0;
 }
+
 .hero p {
     font-size: 1.5rem;
 }
@@ -57,98 +59,108 @@ body {
 .section-box {
     max-width: 900px;
     margin: 60px auto;
-    padding: 30px;
 }
+
 .section-box h2 {
     color: #b0836f;
     font-size: 2rem;
 }
+
 .section-box p {
     color: #555;
 }
 
-/* Imágenes generales */
-.section-image {
-    display: block;
-    margin: 20px auto;
-    width: 100%;
-}
-
-/* Preboda imagen más pequeña */
+/* PREBODA MUY PEQUEÑA */
 #preboda .section-image {
-    width: 50%;
-    max-width: 300px;
+    width: 30%;
+    max-width: 220px;
+    margin-top: 20px;
 }
 
-/* Boda */
+/* BODA */
 .boda-columnas {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
+    gap: 60px;
+    margin-top: 40px;
 }
 
 .boda-col {
-    flex: 1 1 400px;
-    max-width: 450px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* MISMA ALTURA PARA AMBAS IMÁGENES */
-.boda-col .section-image {
-    height: 280px;
-    object-fit: cover;
-    border-radius: 8px;
+/* Contenedor fijo para alinear imágenes */
+.boda-img-wrapper {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Pie de imagen */
+.boda-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Texto boda */
 .pie-imagen {
     font-style: italic;
-    margin: 10px 0 5px;
+    margin: 15px 0 8px;
+}
+
+.boda-col a {
+    color: #1a4fff;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /* Mapa */
-.map-location {
-    font-size: 1.5rem;
+.map-section .map-location {
+    font-size: 1.4rem;
     color: #b0836f;
-}
-
-.map-link a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #d7b7a8;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
 /* Asistencia */
 #asistencia {
-    background-color: #fef7f5;
+    background: #fef7f5;
     border-radius: 10px;
+    padding: 30px;
 }
 
 .asistencia-link a {
-    padding: 12px 25px;
-    background-color: #b0836f;
+    background: #b0836f;
     color: white;
+    padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
 }
 
+.asistencia-link a:hover {
+    background: #8d6858;
+}
+
 /* Música */
 .song-request {
-    background-color: #fef7f5;
+    background: #fef7f5;
     border-radius: 10px;
+    padding: 30px;
 }
 
 .song-request a {
-    padding: 12px 25px;
-    background-color: #d7b7a8;
+    background: #d7b7a8;
     color: white;
+    padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
+}
+
+.song-request a:hover {
+    background: #b0836f;
 }
 
 /* Footer */
@@ -156,5 +168,5 @@ footer {
     background: #d7b7a8;
     color: white;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
