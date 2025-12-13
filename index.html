@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <title>Paula & Jorge — Nuestra Boda</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Georgia&display=swap" rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- MENÚ FIJO -->
+<!-- MENÚ FIJO REAL -->
 <header class="menu">
     <nav>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#preboda">Preboda</a></li>
             <li><a href="#boda">Boda</a></li>
+            <li><a href="#contador">Cuenta atrás</a></li>
             <li><a href="#llegar">Cómo llegar</a></li>
             <li><a href="#asistencia">Asistencia</a></li>
             <li><a href="#musica">Canciones</a></li>
-            <li><a href="#contador">Cuenta atrás</a></li>
         </ul>
     </nav>
 </header>
@@ -29,32 +29,22 @@
 <div class="container">
 
     <!-- HERO -->
-    <header class="hero fade-in">
+    <section class="hero fade-in" id="inicio">
         <h1 class="hero-names">Paula & Jorge</h1>
-        <p>12 Septiembre 2026</p>
-    </header>
-
-    <!-- INICIO -->
-    <section id="inicio" class="section-box fade-in">
-        <h2>¡NOS CASAMOS!</h2>
-        <p>Aquí puedes escribir algo bonito sobre vosotros.</p>
+        <p>12 de septiembre de 2026</p>
     </section>
 
     <!-- PREBODA -->
     <section id="preboda" class="section-box fade-in">
-        <h2>PREBODA</h2>
-        <p>Os esperamos el viernes 11 de septiembre de 2026.</p>
-        <p>20:00 — Hotel Miralrío (Cacabelos)</p>
-        <img src="miralrío.png" alt="Foto preboda" class="section-image">
+        <h2>Preboda</h2>
+        <p>Viernes 11 de septiembre · 20:00</p>
+        <p>Hotel Miralrío · Cacabelos</p>
+        <img src="miralrío.png" alt="Preboda" class="section-image">
     </section>
 
     <!-- BODA -->
     <section id="boda" class="section-box fade-in">
-        <h2>BODA</h2>
-        <p>
-            Detalles y recuerdos del día más especial de nuestras vidas.
-            A continuación te mostramos los lugares principales del día con la hora correspondiente.
-        </p>
+        <h2>Boda</h2>
 
         <div class="boda-columnas">
 
@@ -62,7 +52,7 @@
                 <div class="boda-img-wrapper">
                     <img src="angustias blanco y negro png.png" alt="Ceremonia">
                 </div>
-                <p class="pie-imagen">17:00 — Ceremonia</p>
+                <p class="pie-imagen">17:00 · Ceremonia</p>
                 <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia" target="_blank">
                     Santuario de la Quinta Angustia
                 </a>
@@ -72,7 +62,7 @@
                 <div class="boda-img-wrapper">
                     <img src="Canedo final png.png" alt="Celebración">
                 </div>
-                <p class="pie-imagen">19:00 — Celebración</p>
+                <p class="pie-imagen">19:00 · Celebración</p>
                 <a href="https://pradaatope.com.es/" target="_blank">
                     Palacio de Canedo
                 </a>
@@ -87,18 +77,17 @@
         <div id="countdown">
             <div><span id="days"></span>Días</div>
             <div><span id="hours"></span>Horas</div>
-            <div><span id="minutes"></span>Min</div>
-            <div><span id="seconds"></span>Seg</div>
+            <div><span id="minutes"></span>Minutos</div>
+            <div><span id="seconds"></span>Segundos</div>
         </div>
     </section>
 
-    <!-- CÓMO LLEGAR -->
+    <!-- MAPA -->
     <section id="llegar" class="section-box map-section fade-in">
         <h2>Cómo llegar</h2>
-        <p class="map-location">Cacabelos (León)</p>
 
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11007.1234567890!2d-6.7351623!3d42.5986974"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.27628659664!2d-6.7349024!3d42.5994325"
             width="100%" 
             height="300" 
             style="border:0;" 
@@ -106,7 +95,7 @@
             loading="lazy">
         </iframe>
 
-        <p class="map-link">
+        <p>
             <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/" target="_blank">
                 Abrir en Google Maps
             </a>
@@ -114,24 +103,20 @@
     </section>
 
     <!-- ASISTENCIA -->
-    <section id="asistencia" class="section-box fade-in">
+    <section id="asistencia" class="section-box destacado fade-in">
         <h2>Confirmación de asistencia</h2>
-        <p>
-            Por favor, rellena este formulario para confirmar tu asistencia.
-        </p>
-        <p class="asistencia-link">
-            <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank">
-                Rellenar formulario
-            </a>
-        </p>
+        <p>Por favor, confirma tu asistencia en el siguiente enlace.</p>
+        <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank">
+            Confirmar asistencia
+        </a>
     </section>
 
     <!-- MÚSICA -->
-    <section id="musica" class="section-box song-request fade-in">
+    <section id="musica" class="section-box destacado fade-in">
         <h2>Ayúdanos con la música</h2>
-        <p>Cuéntanos qué canciones te gustaría que suenen en nuestra boda.</p>
+        <p>¿Qué canción no puede faltar?</p>
         <a href="https://forms.gle/PJSDJ1ixuKXTJE9g9" target="_blank">
-            Sugerir una canción
+            Sugerir canción
         </a>
     </section>
 
@@ -144,7 +129,7 @@
 
 <!-- JS -->
 <script>
-/* COUNTDOWN */
+/* CUENTA ATRÁS */
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
 
 setInterval(() => {
@@ -157,15 +142,12 @@ setInterval(() => {
     document.getElementById("seconds").innerText = Math.floor((distance / 1000) % 60);
 }, 1000);
 
-/* FADE IN ON SCROLL */
+/* FADE IN */
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("visible");
     });
 });
-
 document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 </script>
 
