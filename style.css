@@ -66,14 +66,10 @@ body {
     font-size: 2rem;
 }
 
-.section-box p {
-    color: #555;
-}
-
-/* PREBODA MUY PEQUEÑA */
+/* PREBODA (tamaño intermedio) */
 #preboda .section-image {
-    width: 30%;
-    max-width: 220px;
+    width: 45%;
+    max-width: 380px;
     margin-top: 20px;
 }
 
@@ -107,13 +103,13 @@ body {
     object-fit: contain;
 }
 
-/* Texto boda */
+/* Textos boda */
 .pie-imagen {
     font-style: italic;
     margin: 15px 0 8px;
 }
 
-.boda-col a {
+.boda-link a {
     color: #1a4fff;
     font-weight: bold;
     text-decoration: underline;
