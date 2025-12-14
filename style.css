@@ -1,182 +1,162 @@
 body {
-    margin: 0;
-    font-family: Georgia, serif;
-    background: #faf7f2;
-    color: #333;
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #faf7f2;
+  color: #333;
 }
 
 /* MENÚ */
 .menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #d7b7a8;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #d7b7a8;
+  z-index: 1000;
 }
 
 .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 12px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
 }
 
 .menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 14px;
-}
-
-.menu a:hover {
-    background-color: #b0836f;
-    border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* CONTENEDOR */
 .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 110px 20px 0;
-    text-align: center;
+  max-width: 1000px;
+  margin: auto;
+  padding: 110px 20px 0;
+  text-align: center;
 }
 
 /* HERO */
 .hero {
-    height: 60vh;
-    background: url("tu-foto.jpg") center 35% / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  height: 60vh;
+  background: url("tu-foto.jpg") center 35% / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
 }
 
 .hero-names {
-    font-family: 'Great Vibes', cursive;
-    font-size: 4rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
 }
 
 /* SECCIONES */
 .section-box {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 30px;
+  margin: 60px auto;
+  padding: 30px;
 }
 
 .section-box h2 {
-    color: #b0836f;
+  color: #b0836f;
 }
 
 /* PREBODA */
 .section-image {
-    width: 55%;
-    max-width: 420px;
-    margin-top: 20px;
+  width: 55%;
+  max-width: 420px;
 }
 
-/* BODA – SOLUCIÓN DEFINITIVA */
+/* BODA — ARREGLO REAL */
 .boda-columnas {
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
 .boda-col {
-    width: 340px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* 🔑 CONTENEDOR FIJO */
 .boda-img-wrapper {
-    width: 100%;
-    height: 260px;           /* 🔑 MISMA ALTURA */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* 🔑 LA CLAVE */
 .boda-img-wrapper img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;     /* 🔑 imagen completa */
+  height: 100%;
+  width: auto;
+  display: block;
 }
 
 /* TEXTO */
 .pie-imagen {
-    font-style: italic;
-    margin: 12px 0;
+  margin: 12px 0;
+  font-style: italic;
 }
 
 /* BOTONES */
 .btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 22px;
-    background-color: #d7b7a8;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
+  background: #d7b7a8;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.btn:hover {
-    background-color: #b0836f;
-}
-
-/* DESTACADOS */
+/* DESTACADO */
 .destacado {
-    background-color: #fef7f5;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fef7f5;
+  border-radius: 10px;
 }
 
 /* MAPA */
 iframe {
-    margin: 20px 0;
-    border-radius: 10px;
+  border-radius: 10px;
+  margin: 20px 0;
 }
 
 /* CUENTA ATRÁS */
 #countdown {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 #countdown span {
-    font-size: 2rem;
-    color: #b0836f;
-    display: block;
+  font-size: 2rem;
+  color: #b0836f;
 }
 
 /* FAQ */
 details summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: #b0836f;
-    margin: 15px 0;
+  color: #b0836f;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* FOOTER */
 footer {
-    background-color: #d7b7a8;
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
+  background: #d7b7a8;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
 }
 
 /* MÓVIL */
 @media (max-width: 768px) {
-    #countdown {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero-names {
-        font-size: 3rem;
-    }
+  #countdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
