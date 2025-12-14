@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <title>Paula & Jorge — Nuestra Boda</title>
 
-    <!-- Fuente manuscrita -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- MENÚ FIJO -->
 <header class="menu">
     <nav>
         <ul>
@@ -22,6 +19,7 @@
             <li><a href="#llegar">Cómo llegar</a></li>
             <li><a href="#asistencia">Asistencia</a></li>
             <li><a href="#musica">Canciones</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
     </nav>
 </header>
@@ -29,13 +27,13 @@
 <div class="container">
 
     <!-- HERO -->
-    <section class="hero fade-in" id="inicio">
+    <section class="hero" id="inicio">
         <h1 class="hero-names">Paula & Jorge</h1>
-        <p>12 de septiembre de 2026</p>
+        <p class="hero-date">12 de septiembre de 2026</p>
     </section>
 
     <!-- CUENTA ATRÁS -->
-    <section id="contador" class="section-box fade-in">
+    <section id="contador" class="section-box">
         <h2>Cuenta atrás</h2>
         <div id="countdown">
             <div><span id="days"></span>Días</div>
@@ -46,26 +44,26 @@
     </section>
 
     <!-- PREBODA -->
-    <section id="preboda" class="section-box fade-in">
+    <section id="preboda" class="section-box">
         <h2>Preboda</h2>
         <p>Viernes 11 de septiembre · 20:00</p>
         <p>Hotel Miralrío · Cacabelos</p>
-        <img src="miralrío.png" alt="Preboda" class="section-image">
+        <img src="miralrío.png" class="section-image" alt="Preboda">
     </section>
 
     <!-- BODA -->
-    <section id="boda" class="section-box fade-in">
+    <section id="boda" class="section-box">
         <h2>Boda</h2>
 
         <div class="boda-columnas">
-
             <div class="boda-col">
                 <div class="boda-img-wrapper">
                     <img src="angustias blanco y negro png.png" alt="Ceremonia">
                 </div>
                 <p class="pie-imagen">17:00 · Ceremonia</p>
-                <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia" target="_blank" class="btn">
-                    Santuario de la Quinta Angustia
+                <a class="btn" target="_blank"
+                   href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia">
+                   Santuario de la Quinta Angustia
                 </a>
             </div>
 
@@ -74,103 +72,90 @@
                     <img src="Canedo final png.png" alt="Celebración">
                 </div>
                 <p class="pie-imagen">19:00 · Celebración</p>
-                <a href="https://pradaatope.com.es/" target="_blank" class="btn">
-                    Palacio de Canedo
+                <a class="btn" target="_blank"
+                   href="https://pradaatope.com.es/">
+                   Palacio de Canedo
                 </a>
             </div>
-
         </div>
     </section>
 
     <!-- MAPA -->
-    <section id="llegar" class="section-box map-section fade-in">
+    <section id="llegar" class="section-box destacado">
         <h2>Cómo llegar</h2>
 
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30be6d0d3d13cf:0xa9e9860024e5292d!2s24540+Cacabelos,+Le%C3%B3n!5e0!3m2!1ses!2ses!5e0"
-            width="100%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen 
-            loading="lazy">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470"
+            width="100%" height="300" style="border:0;" loading="lazy">
         </iframe>
 
-        <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/" target="_blank" class="btn">
-            Abrir en Google Maps
+        <a class="btn" target="_blank"
+           href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/">
+           Abrir en Google Maps
         </a>
     </section>
 
     <!-- ASISTENCIA -->
-    <section id="asistencia" class="section-box destacado fade-in">
+    <section id="asistencia" class="section-box destacado">
         <h2>Confirmación de asistencia</h2>
         <p>Por favor, confirma tu asistencia.</p>
-        <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank" class="btn">
-            Confirmar asistencia
+        <a class="btn" target="_blank"
+           href="https://forms.gle/Hwt1L5NKvezR9eD18">
+           Confirmar asistencia
         </a>
     </section>
 
     <!-- MÚSICA -->
-    <section id="musica" class="section-box destacado fade-in">
+    <section id="musica" class="section-box destacado">
         <h2>Ayúdanos con la música</h2>
         <p>¿Qué canción no puede faltar?</p>
-        <a href="https://forms.gle/PJSDJ1ixuKXTJE9g9" target="_blank" class="btn">
-            Sugerir canción
+        <a class="btn" target="_blank"
+           href="https://forms.gle/PJSDJ1ixuKXTJE9g9">
+           Sugerir canción
         </a>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section-box fade-in">
+    <section id="faq" class="section-box destacado">
         <h2>Preguntas frecuentes</h2>
 
         <details>
-            <summary>¿Habrá autobús?</summary>
-            <p>Estamos valorándolo. Os informaremos más adelante.</p>
+            <summary>¿Hay código de vestimenta?</summary>
+            <p>Elegante pero cómodo. Lo importante es que vengas a disfrutar.</p>
         </details>
 
         <details>
             <summary>¿Pueden venir niños?</summary>
-            <p>Nos encantan los peques, ¡son bienvenidos!</p>
+            <p>Sí, serán bienvenidos.</p>
         </details>
 
         <details>
-            <summary>¿Hay parking en el lugar de la celebración?</summary>
-            <p>Sí, hay parking disponible para los invitados.</p>
+            <summary>¿Habrá transporte?</summary>
+            <p>Estamos valorando opciones. Os informaremos con antelación.</p>
         </details>
 
         <details>
-            <summary>¿Hasta qué hora dura la fiesta?</summary>
-            <p>Hasta que el cuerpo aguante 💃🕺</p>
+            <summary>¿Hasta cuándo puedo confirmar?</summary>
+            <p>Agradecemos confirmación lo antes posible.</p>
         </details>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>Con cariño, Paula & Jorge ❤️</p>
     </footer>
 
 </div>
 
-<!-- JS -->
 <script>
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
-
 setInterval(() => {
     const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-    document.getElementById("hours").innerText = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    document.getElementById("minutes").innerText = Math.floor((distance / 1000 / 60) % 60);
-    document.getElementById("seconds").innerText = Math.floor((distance / 1000) % 60);
+    const d = weddingDate - now;
+    days.innerText = Math.floor(d / (1000*60*60*24));
+    hours.innerText = Math.floor((d / (1000*60*60)) % 24);
+    minutes.innerText = Math.floor((d / 60000) % 60);
+    seconds.innerText = Math.floor((d / 1000) % 60);
 }, 1000);
-
-/* FADE IN */
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
-    });
-});
-document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 </script>
 
 </body>
