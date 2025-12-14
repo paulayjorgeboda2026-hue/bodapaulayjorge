@@ -45,7 +45,7 @@ body {
 /* HERO */
 .hero {
     height: 70vh;
-    background-image: url("hero.jpg");
+    background-image: url("tu-foto.jpg");
     background-size: cover;
     background-position: center 30%;
     display: flex;
