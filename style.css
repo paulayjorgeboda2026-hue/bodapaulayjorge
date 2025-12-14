@@ -10,17 +10,16 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #d7b7a8;
+    background: #d7b7a8;
     z-index: 1000;
 }
 
 .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 10px 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
 }
 
 .menu a {
@@ -31,7 +30,7 @@ body {
 }
 
 .menu a:hover {
-    background-color: #b0836f;
+    background: #b0836f;
     border-radius: 5px;
 }
 
@@ -45,45 +44,58 @@ body {
 
 /* HERO */
 .hero {
-    height: 60vh;
-    background: url("tu-foto.jpg") center 35% / cover no-repeat;
+    height: 70vh;
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center 30%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 80px;
+    padding-top: 100px;
     color: white;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    text-shadow: 0 3px 6px rgba(0,0,0,.6);
 }
 
 .hero-names {
     font-family: 'Great Vibes', cursive;
-    font-size: 4rem;
+    font-size: 4.5rem;
+    margin: 0;
+}
+
+.hero-date {
+    margin-top: 10px;
 }
 
 /* SECCIONES */
 .section-box {
-    max-width: 900px;
     margin: 60px auto;
     padding: 30px;
 }
 
 .section-box h2 {
     color: #b0836f;
-    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* DESTACADO */
+.destacado {
+    background: #fef7f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* IMÁGENES */
 .section-image {
-    width: 55%;
-    max-width: 450px;
+    width: 50%;
+    max-width: 420px;
     margin-top: 20px;
 }
 
 /* BODA */
 .boda-columnas {
     display: flex;
-    gap: 50px;
     justify-content: center;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -94,8 +106,8 @@ body {
 .boda-img-wrapper {
     height: 260px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .boda-img-wrapper img {
@@ -106,92 +118,56 @@ body {
 
 .pie-imagen {
     font-style: italic;
-    margin: 10px 0;
 }
 
 /* BOTONES */
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #d7b7a8;
+    margin-top: 15px;
+    padding: 10px 22px;
+    background: #d7b7a8;
     color: white;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #b0836f;
+    background: #b0836f;
 }
 
-/* DESTACADOS */
-.destacado {
-    background-color: #fef7f5;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* MAPA */
-.map-section iframe {
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-/* CUENTA ATRÁS */
+/* COUNTDOWN */
 #countdown {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    margin-top: 20px;
 }
 
 #countdown span {
+    display: block;
     font-size: 2rem;
     color: #b0836f;
-    display: block;
 }
 
 /* FAQ */
-#faq details {
+details {
     margin: 15px auto;
     max-width: 700px;
     text-align: left;
 }
 
-#faq summary {
+summary {
     cursor: pointer;
     font-weight: bold;
     color: #b0836f;
 }
 
-#faq summary::marker {
-    color: #b0836f;
-}
-
-#faq p {
-    margin-top: 10px;
-}
-
 /* FOOTER */
 footer {
-    background-color: #d7b7a8;
+    background: #d7b7a8;
     color: white;
     padding: 20px;
     margin-top: 40px;
-}
-
-/* ANIMACIONES */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* MÓVIL */
