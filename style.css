@@ -46,10 +46,11 @@ body {
 /* HERO */
 .hero {
     height: 60vh;
-    background: url("tu-foto.jpg") center / cover no-repeat;
+    background: url("hero.jpg") center 35% / cover no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 80px;
     color: white;
     text-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
@@ -118,6 +119,7 @@ body {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -161,6 +163,10 @@ body {
 #faq summary {
     cursor: pointer;
     font-weight: bold;
+    color: #b0836f;
+}
+
+#faq summary::marker {
     color: #b0836f;
 }
 
