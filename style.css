@@ -10,27 +10,28 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #d7b7a8;
+    background-color: #d7b7a8;
     z-index: 1000;
 }
 
 .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px 0;
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
+    gap: 20px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 8px 14px;
 }
 
 .menu a:hover {
-    background: #b0836f;
+    background-color: #b0836f;
     border-radius: 5px;
 }
 
@@ -38,55 +39,46 @@ body {
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 120px 20px 0;
+    padding: 110px 20px 0;
     text-align: center;
 }
 
 /* HERO */
 .hero {
-    height: 70vh;
-    background-image: url("tu-foto.jpg");
-    background-size: cover;
-    background-position: center 30%;
+    height: 60vh;
+    background: url("tu-foto.jpg") center 35% / cover no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 100px;
+    justify-content: center;
     color: white;
-    text-shadow: 0 3px 6px rgba(0,0,0,.6);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
 .hero-names {
     font-family: 'Great Vibes', cursive;
-    font-size: 4.5rem;
-    margin: 0;
+    font-size: 4rem;
+    margin-bottom: 10px;
 }
 
 .hero-date {
-    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
 /* SECCIONES */
 .section-box {
+    max-width: 900px;
     margin: 60px auto;
     padding: 30px;
 }
 
 .section-box h2 {
     color: #b0836f;
-    margin-bottom: 20px;
-}
-
-/* DESTACADO */
-.destacado {
-    background: #fef7f5;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 2rem;
 }
 
 /* IMÁGENES */
 .section-image {
-    width: 50%;
+    width: 55%;
     max-width: 420px;
     margin-top: 20px;
 }
@@ -94,8 +86,8 @@ body {
 /* BODA */
 .boda-columnas {
     display: flex;
+    gap: 50px;
     justify-content: center;
-    gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -106,8 +98,8 @@ body {
 .boda-img-wrapper {
     height: 260px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .boda-img-wrapper img {
@@ -118,14 +110,15 @@ body {
 
 .pie-imagen {
     font-style: italic;
+    margin: 10px 0;
 }
 
 /* BOTONES */
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 22px;
-    background: #d7b7a8;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d7b7a8;
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -133,38 +126,51 @@ body {
 }
 
 .btn:hover {
-    background: #b0836f;
+    background-color: #b0836f;
 }
 
-/* COUNTDOWN */
+/* DESTACADO */
+.destacado {
+    background-color: #fef7f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* MAPA */
+iframe {
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* CUENTA ATRÁS */
 #countdown {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    margin-top: 20px;
 }
 
 #countdown span {
-    display: block;
     font-size: 2rem;
     color: #b0836f;
+    display: block;
 }
 
 /* FAQ */
-details {
-    margin: 15px auto;
-    max-width: 700px;
-    text-align: left;
-}
-
-summary {
+details summary {
     cursor: pointer;
     font-weight: bold;
     color: #b0836f;
+    margin: 15px 0;
+}
+
+details p {
+    margin: 10px 0 20px;
 }
 
 /* FOOTER */
 footer {
-    background: #d7b7a8;
+    background-color: #d7b7a8;
     color: white;
     padding: 20px;
     margin-top: 40px;
