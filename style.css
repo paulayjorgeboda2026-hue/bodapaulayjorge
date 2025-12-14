@@ -46,7 +46,7 @@ body {
 /* HERO */
 .hero {
     height: 60vh;
-    background: url("hero.jpg") center 35% / cover no-repeat;
+    background: url("tu-foto.jpg") center 35% / cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
