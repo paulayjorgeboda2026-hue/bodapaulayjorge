@@ -5,7 +5,7 @@ body {
     color: #333;
 }
 
-/* MENÚ FIJO */
+/* MENÚ */
 .menu {
     position: fixed;
     top: 0;
@@ -46,11 +46,12 @@ body {
 /* HERO */
 .hero {
     height: 60vh;
-    background: #b0836f;
+    background: url("tu-foto.jpg") center / cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
 
 .hero-names {
@@ -72,8 +73,8 @@ body {
 
 /* IMÁGENES */
 .section-image {
-    width: 50%;
-    max-width: 320px;
+    width: 55%;
+    max-width: 450px;
     margin-top: 20px;
 }
 
@@ -111,7 +112,7 @@ body {
 .btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 22px;
+    padding: 10px 20px;
     background-color: #d7b7a8;
     color: white;
     text-decoration: none;
@@ -148,6 +149,23 @@ body {
     font-size: 2rem;
     color: #b0836f;
     display: block;
+}
+
+/* FAQ */
+#faq details {
+    margin: 15px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+#faq summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #b0836f;
+}
+
+#faq p {
+    margin-top: 10px;
 }
 
 /* FOOTER */
