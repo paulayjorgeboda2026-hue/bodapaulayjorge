@@ -5,6 +5,7 @@
     <title>Paula & Jorge — Nuestra Boda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Fuente manuscrita -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -33,6 +34,7 @@
 
 <div class="container">
 
+    <!-- HERO -->
     <section id="inicio" class="hero reveal">
         <h1 class="hero-names">Paula & Jorge</h1>
         <p class="hero-date">12 de septiembre de 2026</p>
@@ -40,6 +42,7 @@
 
     <div class="section-divider"></div>
 
+    <!-- CUENTA ATRÁS -->
     <section id="contador" class="section-box reveal">
         <h2>Cuenta atrás</h2>
         <div id="countdown">
@@ -52,14 +55,105 @@
 
     <div class="section-divider"></div>
 
-    <section class="section-box reveal">
-        <h2>Galería</h2>
-        <div class="gallery">
-            <img src="foto1.jpg">
-            <img src="foto2.jpg">
-            <img src="foto3.jpg">
-            <img src="foto4.jpg">
+    <!-- PREBODA -->
+    <section id="preboda" class="section-box reveal">
+        <h2>Preboda</h2>
+        <p>Viernes 11 de septiembre · 20:00</p>
+        <p>Hotel Miralrío · Cacabelos</p>
+        <img src="miralrío.png" alt="Preboda" class="section-image">
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- BODA -->
+    <section id="boda" class="section-box reveal">
+        <h2>Boda</h2>
+
+        <div class="boda-columnas">
+            <div class="boda-col">
+                <div class="boda-img-wrapper">
+                    <img src="angustias blanco y negro png.png" alt="Ceremonia">
+                </div>
+                <p class="pie-imagen">17:00 · Ceremonia</p>
+                <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia" target="_blank" class="btn">
+                    Santuario de la Quinta Angustia
+                </a>
+            </div>
+
+            <div class="boda-col">
+                <div class="boda-img-wrapper">
+                    <img src="Canedo final png.png" alt="Celebración">
+                </div>
+                <p class="pie-imagen">19:00 · Celebración</p>
+                <a href="https://pradaatope.com.es/" target="_blank" class="btn">
+                    Palacio de Canedo
+                </a>
+            </div>
         </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CÓMO LLEGAR -->
+    <section id="llegar" class="section-box destacado reveal">
+        <h2>Cómo llegar</h2>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30be6d0d3d13cf%3A0xa9e9860024e5292d!2s24540%20Cacabelos%2C%20Le%C3%B3n!5e0!3m2!1ses!2ses!4v1710000000000"
+            width="100%"
+            height="320"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/" target="_blank" class="btn">
+            Abrir en Google Maps
+        </a>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ASISTENCIA -->
+    <section id="asistencia" class="section-box destacado reveal">
+        <h2>Confirmación de asistencia</h2>
+        <p>Por favor, confirma tu asistencia.</p>
+        <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank" class="btn">
+            Confirmar asistencia
+        </a>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- MÚSICA -->
+    <section id="musica" class="section-box destacado reveal">
+        <h2>Ayúdanos con la música</h2>
+        <p>¿Qué canción no puede faltar?</p>
+        <a href="https://forms.gle/PJSDJ1ixuKXTJE9g9" target="_blank" class="btn">
+            Sugerir canción
+        </a>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-box destacado reveal">
+        <h2>Preguntas frecuentes</h2>
+
+        <details>
+            <summary>¿Hay parking cerca?</summary>
+            <p>Sí, hay zonas de aparcamiento cercanas a ambos lugares.</p>
+        </details>
+
+        <details>
+            <summary>¿Hay dress code?</summary>
+            <p>Elegante, pero cómodo. ¡Queremos veros disfrutar!</p>
+        </details>
+
+        <details>
+            <summary>¿Puedo ir acompañado?</summary>
+            <p>Por favor, indícalo en el formulario de asistencia.</p>
+        </details>
     </section>
 
     <footer>
@@ -68,46 +162,31 @@
 
 </div>
 
-<div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
-</div>
-
 <script>
-/* MENU */
+/* MENÚ */
 function toggleMenu() {
-    document.body.classList.toggle('menu-open');
+    document.body.classList.toggle("menu-open");
 }
 function closeMenu() {
-    document.body.classList.remove('menu-open');
+    document.body.classList.remove("menu-open");
 }
 
-/* SCROLL */
-document.querySelectorAll('.reveal').forEach(el => {
+/* SCROLL REVEAL */
+document.querySelectorAll(".reveal").forEach(el => {
     const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => e.isIntersecting && el.classList.add('active'));
+        entries.forEach(e => e.isIntersecting && el.classList.add("active"));
     });
     obs.observe(el);
 });
-
-/* LIGHTBOX */
-document.querySelectorAll('.gallery img').forEach(img => {
-    img.onclick = () => {
-        document.getElementById('lightbox-img').src = img.src;
-        document.getElementById('lightbox').classList.add('show');
-    };
-});
-function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('show');
-}
 
 /* COUNTDOWN */
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
 setInterval(() => {
     const d = weddingDate - Date.now();
     days.innerText = Math.floor(d / 86400000);
-    hours.innerText = Math.floor(d / 3600000 % 24);
-    minutes.innerText = Math.floor(d / 60000 % 60);
-    seconds.innerText = Math.floor(d / 1000 % 60);
+    hours.innerText = Math.floor((d / 3600000) % 24);
+    minutes.innerText = Math.floor((d / 60000) % 60);
+    seconds.innerText = Math.floor((d / 1000) % 60);
 }, 1000);
 </script>
 
