@@ -3,162 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <title>Paula & Jorge — Nuestra Boda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fuente manuscrita -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="menu">
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#contador">Cuenta atrás</a></li>
-            <li><a href="#preboda">Preboda</a></li>
-            <li><a href="#boda">Boda</a></li>
-            <li><a href="#llegar">Cómo llegar</a></li>
-            <li><a href="#asistencia">Asistencia</a></li>
-            <li><a href="#musica">Canciones</a></li>
-            <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ul>
-    </nav>
+    <div class="menu-inner">
+        <div class="logo">P & J</div>
+
+        <nav id="nav">
+            <ul>
+                <li><a href="#inicio" data-i18n="inicio">Inicio</a></li>
+                <li><a href="#contador" data-i18n="contador">Cuenta atrás</a></li>
+                <li><a href="#preboda" data-i18n="preboda">Preboda</a></li>
+                <li><a href="#boda" data-i18n="boda">Boda</a></li>
+                <li><a href="#llegar" data-i18n="llegar">Cómo llegar</a></li>
+                <li><a href="#asistencia" data-i18n="asistencia">Asistencia</a></li>
+                <li><a href="#musica" data-i18n="musica">Canciones</a></li>
+                <li><a href="#faq" data-i18n="faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="lang-switch">
+            <button onclick="setLang('es')">ES</button>
+            <button onclick="setLang('en')">EN</button>
+        </div>
+
+        <div class="burger" onclick="toggleMenu()">☰</div>
+    </div>
 </header>
 
 <div class="container">
 
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero reveal">
         <h1 class="hero-names">Paula & Jorge</h1>
-        <p class="hero-date">12 de septiembre de 2026</p>
+        <p class="hero-date" data-i18n="fecha">12 de septiembre de 2026</p>
     </section>
 
     <div class="section-divider"></div>
 
-    <section id="contador" class="section-box">
-        <h2>Cuenta atrás</h2>
+    <section id="contador" class="section-box reveal">
+        <h2 data-i18n="contador">Cuenta atrás</h2>
         <div id="countdown">
-            <div><span id="days"></span>Días</div>
-            <div><span id="hours"></span>Horas</div>
-            <div><span id="minutes"></span>Minutos</div>
-            <div><span id="seconds"></span>Segundos</div>
+            <div><span id="days"></span><span data-i18n="dias">Días</span></div>
+            <div><span id="hours"></span><span data-i18n="horas">Horas</span></div>
+            <div><span id="minutes"></span><span data-i18n="minutos">Minutos</span></div>
+            <div><span id="seconds"></span><span data-i18n="segundos">Segundos</span></div>
         </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <section id="preboda" class="section-box">
-        <h2>Preboda</h2>
-        <p>Viernes 11 de septiembre · 20:00</p>
-        <p>Hotel Miralrío · Cacabelos</p>
-        <img src="miralrío.png" alt="Preboda" class="section-image">
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="boda" class="section-box">
-        <h2>Boda</h2>
-
-        <div class="boda-columnas">
-            <div class="boda-col">
-                <div class="boda-img-wrapper">
-                    <img src="angustias blanco y negro png.png" alt="Ceremonia">
-                </div>
-                <p class="pie-imagen">17:00 · Ceremonia</p>
-                <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia" target="_blank" class="btn">
-                    Santuario de la Quinta Angustia
-                </a>
-            </div>
-
-            <div class="boda-col">
-                <div class="boda-img-wrapper">
-                    <img src="Canedo final png.png" alt="Celebración">
-                </div>
-                <p class="pie-imagen">19:00 · Celebración</p>
-                <a href="https://pradaatope.com.es/" target="_blank" class="btn">
-                    Palacio de Canedo
-                </a>
-            </div>
+    <section class="section-box reveal">
+        <h2 data-i18n="galeria">Galería</h2>
+        <div class="gallery">
+            <img src="foto1.jpg">
+            <img src="foto2.jpg">
+            <img src="foto3.jpg">
+            <img src="foto4.jpg">
         </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="llegar" class="section-box destacado">
-        <h2>Cómo llegar</h2>
-
-        <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30be6d0d3d13cf%3A0xa9e9860024e5292d!2s24540%20Cacabelos%2C%20Le%C3%B3n!5e0!3m2!1ses!2ses!4v1710000000000"
-  width="100%"
-  height="320"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-        <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/" target="_blank" class="btn">
-            Abrir en Google Maps
-        </a>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="asistencia" class="section-box destacado">
-        <h2>Confirmación de asistencia</h2>
-        <p>Por favor, confirma tu asistencia.</p>
-        <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank" class="btn">
-            Confirmar asistencia
-        </a>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="musica" class="section-box destacado">
-        <h2>Ayúdanos con la música</h2>
-        <p>¿Qué canción no puede faltar?</p>
-        <a href="https://forms.gle/PJSDJ1ixuKXTJE9g9" target="_blank" class="btn">
-            Sugerir canción
-        </a>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="faq" class="section-box destacado">
-        <h2>Preguntas frecuentes</h2>
-
-        <details>
-            <summary>¿Hay parking cerca?</summary>
-            <p>Sí, hay zonas de aparcamiento cercanas a ambos lugares.</p>
-        </details>
-
-        <details>
-            <summary>¿Hay dress code?</summary>
-            <p>Elegante, pero cómodo. ¡Queremos veros disfrutar!</p>
-        </details>
-
-        <details>
-            <summary>¿Puedo ir acompañado?</summary>
-            <p>Por favor, indícalo en el formulario de asistencia.</p>
-        </details>
     </section>
 
     <footer>
-        <p>Con cariño, Paula & Jorge ❤️</p>
+        <p data-i18n="footer">Con cariño, Paula & Jorge ❤️</p>
     </footer>
+</div>
 
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
 </div>
 
 <script>
+/* MENU */
+function toggleMenu() {
+    document.body.classList.toggle('menu-open');
+}
+
+/* SCROLL ANIMATIONS */
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) el.classList.add('active');
+    });
+});
+
+/* LIGHTBOX */
+document.querySelectorAll('.gallery img').forEach(img => {
+    img.onclick = () => {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').classList.add('show');
+    };
+});
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('show');
+}
+
+/* COUNTDOWN */
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
 setInterval(() => {
-    const now = new Date().getTime();
-    const d = weddingDate - now;
-    days.innerText = Math.floor(d / (1000 * 60 * 60 * 24));
-    hours.innerText = Math.floor((d / (1000 * 60 * 60)) % 24);
-    minutes.innerText = Math.floor((d / 1000 / 60) % 60);
-    seconds.innerText = Math.floor((d / 1000) % 60);
+    const d = weddingDate - new Date().getTime();
+    days.innerText = Math.floor(d / 86400000);
+    hours.innerText = Math.floor(d / 3600000 % 24);
+    minutes.innerText = Math.floor(d / 60000 % 60);
+    seconds.innerText = Math.floor(d / 1000 % 60);
 }, 1000);
+
+/* I18N */
+const texts = {
+    es: {
+        inicio: "Inicio",
+        contador: "Cuenta atrás",
+        preboda: "Preboda",
+        boda: "Boda",
+        llegar: "Cómo llegar",
+        asistencia: "Asistencia",
+        musica: "Canciones",
+        faq: "Preguntas frecuentes",
+        galeria: "Galería",
+        dias: "Días",
+        horas: "Horas",
+        minutos: "Minutos",
+        segundos: "Segundos",
+        footer: "Con cariño, Paula & Jorge ❤️"
+    },
+    en: {
+        inicio: "Home",
+        contador: "Countdown",
+        preboda: "Pre-wedding",
+        boda: "Wedding",
+        llegar: "How to get there",
+        asistencia: "RSVP",
+        musica: "Music",
+        faq: "FAQ",
+        galeria: "Gallery",
+        dias: "Days",
+        horas: "Hours",
+        minutos: "Minutes",
+        segundos: "Seconds",
+        footer: "With love, Paula & Jorge ❤️"
+    }
+};
+
+function setLang(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        el.innerText = texts[lang][el.dataset.i18n];
+    });
+}
 </script>
 
 </body>
