@@ -5,7 +5,6 @@
     <title>Paula & Jorge — Nuestra Boda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fuente manuscrita -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,14 +16,14 @@
 
         <nav id="nav">
             <ul>
-                <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
-                <li><a href="#contador" onclick="closeMenu()">Cuenta atrás</a></li>
-                <li><a href="#preboda" onclick="closeMenu()">Preboda</a></li>
-                <li><a href="#boda" onclick="closeMenu()">Boda</a></li>
-                <li><a href="#llegar" onclick="closeMenu()">Cómo llegar</a></li>
-                <li><a href="#asistencia" onclick="closeMenu()">Asistencia</a></li>
-                <li><a href="#musica" onclick="closeMenu()">Canciones</a></li>
-                <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#contador">Cuenta atrás</a></li>
+                <li><a href="#preboda">Preboda</a></li>
+                <li><a href="#boda">Boda</a></li>
+                <li><a href="#llegar">Cómo llegar</a></li>
+                <li><a href="#asistencia">Asistencia</a></li>
+                <li><a href="#musica">Canciones</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
 
@@ -40,10 +39,8 @@
         <p class="hero-date">12 de septiembre de 2026</p>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- CUENTA ATRÁS -->
-    <section id="contador" class="section-box reveal">
+    <!-- COUNTDOWN -->
+    <section id="contador" class="section reveal">
         <h2>Cuenta atrás</h2>
         <div id="countdown">
             <div><span id="days"></span>Días</div>
@@ -53,133 +50,103 @@
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
     <!-- PREBODA -->
-    <section id="preboda" class="section-box reveal">
+    <section id="preboda" class="section reveal">
         <h2>Preboda</h2>
         <p>Viernes 11 de septiembre · 20:00</p>
         <p>Hotel Miralrío · Cacabelos</p>
-        <img src="miralrío.png" alt="Preboda" class="section-image">
+        <img src="miralrío.png" class="section-image">
     </section>
 
-    <div class="section-divider"></div>
-
     <!-- BODA -->
-    <section id="boda" class="section-box reveal">
+    <section id="boda" class="section reveal">
         <h2>Boda</h2>
 
         <div class="boda-columnas">
             <div class="boda-col">
                 <div class="boda-img-wrapper">
-                    <img src="angustias blanco y negro png.png" alt="Ceremonia">
+                    <img src="angustias blanco y negro png.png">
                 </div>
                 <p class="pie-imagen">17:00 · Ceremonia</p>
-                <a href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia" target="_blank" class="btn">
-                    Santuario de la Quinta Angustia
+                <a class="btn" target="_blank"
+                   href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia">
+                    Ver en Google Maps
                 </a>
             </div>
 
             <div class="boda-col">
                 <div class="boda-img-wrapper">
-                    <img src="Canedo final png.png" alt="Celebración">
+                    <img src="Canedo final png.png">
                 </div>
                 <p class="pie-imagen">19:00 · Celebración</p>
-                <a href="https://pradaatope.com.es/" target="_blank" class="btn">
+                <a class="btn" target="_blank" href="https://pradaatope.com.es/">
                     Palacio de Canedo
                 </a>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- CÓMO LLEGAR -->
-    <section id="llegar" class="section-box destacado reveal">
+    <!-- COMO LLEGAR -->
+    <section id="llegar" class="section destacado reveal">
         <h2>Cómo llegar</h2>
 
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30be6d0d3d13cf%3A0xa9e9860024e5292d!2s24540%20Cacabelos%2C%20Le%C3%B3n!5e0!3m2!1ses!2ses!4v1710000000000"
-            width="100%"
-            height="320"
-            style="border:0;"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470"
+            loading="lazy">
         </iframe>
 
-        <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/" target="_blank" class="btn">
+        <a class="btn" target="_blank"
+           href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/">
             Abrir en Google Maps
         </a>
     </section>
 
-    <div class="section-divider"></div>
-
     <!-- ASISTENCIA -->
-    <section id="asistencia" class="section-box destacado reveal">
+    <section id="asistencia" class="section destacado reveal">
         <h2>Confirmación de asistencia</h2>
-        <p>Por favor, confirma tu asistencia.</p>
-        <a href="https://forms.gle/Hwt1L5NKvezR9eD18" target="_blank" class="btn">
+        <p>Por favor, confirma antes del 1 de agosto</p>
+        <a class="btn" target="_blank"
+           href="https://forms.gle/Hwt1L5NKvezR9eD18">
             Confirmar asistencia
         </a>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- MÚSICA -->
-    <section id="musica" class="section-box destacado reveal">
+    <!-- MUSICA -->
+    <section id="musica" class="section destacado reveal">
         <h2>Ayúdanos con la música</h2>
         <p>¿Qué canción no puede faltar?</p>
-        <a href="https://forms.gle/PJSDJ1ixuKXTJE9g9" target="_blank" class="btn">
+        <a class="btn" target="_blank"
+           href="https://forms.gle/PJSDJ1ixuKXTJE9g9">
             Sugerir canción
         </a>
     </section>
 
-    <div class="section-divider"></div>
-
     <!-- FAQ -->
-    <section id="faq" class="section-box destacado reveal">
+    <section id="faq" class="section destacado reveal">
         <h2>Preguntas frecuentes</h2>
 
         <details>
-            <summary>¿Hay parking cerca?</summary>
-            <p>Sí, hay zonas de aparcamiento cercanas a ambos lugares.</p>
+            <summary>¿Hay parking?</summary>
+            <p>Sí, en ambos lugares.</p>
         </details>
 
         <details>
             <summary>¿Hay dress code?</summary>
-            <p>Elegante, pero cómodo. ¡Queremos veros disfrutar!</p>
-        </details>
-
-        <details>
-            <summary>¿Puedo ir acompañado?</summary>
-            <p>Por favor, indícalo en el formulario de asistencia.</p>
+            <p>Elegante y cómodo.</p>
         </details>
     </section>
 
     <footer>
-        <p>Con cariño, Paula & Jorge ❤️</p>
+        <p>Con cariño, Paula & Jorge 🤎</p>
     </footer>
 
 </div>
 
 <script>
-/* MENÚ */
 function toggleMenu() {
     document.body.classList.toggle("menu-open");
 }
-function closeMenu() {
-    document.body.classList.remove("menu-open");
-}
 
-/* SCROLL REVEAL */
-document.querySelectorAll(".reveal").forEach(el => {
-    const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => e.isIntersecting && el.classList.add("active"));
-    });
-    obs.observe(el);
-});
-
-/* COUNTDOWN */
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
 setInterval(() => {
     const d = weddingDate - Date.now();
@@ -188,6 +155,12 @@ setInterval(() => {
     minutes.innerText = Math.floor((d / 60000) % 60);
     seconds.innerText = Math.floor((d / 1000) % 60);
 }, 1000);
+
+document.querySelectorAll(".reveal").forEach(el => {
+    new IntersectionObserver(e => {
+        e[0].isIntersecting && el.classList.add("active");
+    }).observe(el);
+});
 </script>
 
 </body>
