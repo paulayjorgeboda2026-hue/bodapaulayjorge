@@ -17,35 +17,27 @@ body {
 .menu-inner {
     max-width: 1000px;
     margin: auto;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    font-weight: bold;
     color: white;
+    font-weight: bold;
 }
 
 .menu ul {
-    display: flex;
-    gap: 15px;
     list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
-
-.lang-switch button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: 5px;
 }
 
 .burger {
@@ -55,17 +47,18 @@ body {
     cursor: pointer;
 }
 
-/* HERO */
+/* CONTAINER */
 .container {
-    padding-top: 100px;
     max-width: 1000px;
     margin: auto;
+    padding: 100px 20px 0;
     text-align: center;
 }
 
+/* HERO */
 .hero {
     height: 60vh;
-    background: url("tu-foto.jpg") center / cover no-repeat;
+    background: url("tu-foto.jpg") center 35% / cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,6 +68,10 @@ body {
 .hero-names {
     font-family: 'Great Vibes', cursive;
     font-size: 4rem;
+}
+
+.hero-date {
+    font-size: 1.2rem;
 }
 
 /* SECTIONS */
@@ -97,6 +94,12 @@ body {
     gap: 15px;
 }
 
+#countdown span {
+    font-size: 2rem;
+    color: #b0836f;
+    display: block;
+}
+
 /* GALLERY */
 .gallery {
     display: grid;
@@ -107,17 +110,16 @@ body {
 .gallery img {
     width: 100%;
     border-radius: 8px;
-    cursor: pointer;
 }
 
 /* LIGHTBOX */
 #lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.85);
     display: none;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 #lightbox.show {
@@ -132,9 +134,10 @@ body {
 /* SCROLL */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(25px);
     transition: 0.8s ease;
 }
+
 .reveal.active {
     opacity: 1;
     transform: none;
@@ -142,6 +145,21 @@ body {
 
 /* MOBILE */
 @media (max-width: 768px) {
+
+    .hero {
+        height: 45vh;
+        padding: 20px;
+    }
+
+    .hero-names {
+        font-size: 3rem;
+    }
+
+    #countdown {
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+    }
+
     .menu ul {
         position: fixed;
         inset: 0;
@@ -149,7 +167,9 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 25px;
         display: none;
+        font-size: 1.4rem;
     }
 
     body.menu-open .menu ul {
