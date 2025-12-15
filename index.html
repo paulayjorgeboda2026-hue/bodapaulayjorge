@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- MENÚ FIJO -->
 <header class="menu">
     <nav>
         <ul>
@@ -29,13 +28,13 @@
 
 <div class="container">
 
-    <!-- HERO -->
     <section id="inicio" class="hero">
         <h1 class="hero-names">Paula & Jorge</h1>
         <p class="hero-date">12 de septiembre de 2026</p>
     </section>
 
-    <!-- CUENTA ATRÁS -->
+    <div class="section-divider"></div>
+
     <section id="contador" class="section-box">
         <h2>Cuenta atrás</h2>
         <div id="countdown">
@@ -46,7 +45,8 @@
         </div>
     </section>
 
-    <!-- PREBODA -->
+    <div class="section-divider"></div>
+
     <section id="preboda" class="section-box">
         <h2>Preboda</h2>
         <p>Viernes 11 de septiembre · 20:00</p>
@@ -54,12 +54,12 @@
         <img src="miralrío.png" alt="Preboda" class="section-image">
     </section>
 
-    <!-- BODA -->
+    <div class="section-divider"></div>
+
     <section id="boda" class="section-box">
         <h2>Boda</h2>
 
         <div class="boda-columnas">
-
             <div class="boda-col">
                 <div class="boda-img-wrapper">
                     <img src="angustias blanco y negro png.png" alt="Ceremonia">
@@ -79,32 +79,26 @@
                     Palacio de Canedo
                 </a>
             </div>
-
         </div>
     </section>
 
-    <!-- CÓMO LLEGAR -->
+    <div class="section-divider"></div>
+
     <section id="llegar" class="section-box destacado">
         <h2>Cómo llegar</h2>
 
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30be6d0d3d13cf%3A0xa9e9860024e5292d!2s24540%20Cacabelos%2C%20Le%C3%B3n!5e0!3m2!1ses!2ses!4v1710000000000"
-            width="100%"
-            height="320"
-            style="border:0;"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.599470"
+            width="100%" height="320" style="border:0;" loading="lazy">
         </iframe>
 
-        <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/"
-           target="_blank"
-           class="btn">
+        <a href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/" target="_blank" class="btn">
             Abrir en Google Maps
         </a>
     </section>
 
-    <!-- ASISTENCIA -->
+    <div class="section-divider"></div>
+
     <section id="asistencia" class="section-box destacado">
         <h2>Confirmación de asistencia</h2>
         <p>Por favor, confirma tu asistencia.</p>
@@ -113,7 +107,8 @@
         </a>
     </section>
 
-    <!-- MÚSICA -->
+    <div class="section-divider"></div>
+
     <section id="musica" class="section-box destacado">
         <h2>Ayúdanos con la música</h2>
         <p>¿Qué canción no puede faltar?</p>
@@ -122,7 +117,8 @@
         </a>
     </section>
 
-    <!-- FAQ -->
+    <div class="section-divider"></div>
+
     <section id="faq" class="section-box destacado">
         <h2>Preguntas frecuentes</h2>
 
@@ -142,25 +138,21 @@
         </details>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>Con cariño, Paula & Jorge ❤️</p>
     </footer>
 
 </div>
 
-<!-- JS CUENTA ATRÁS -->
 <script>
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
-
 setInterval(() => {
     const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-    document.getElementById("hours").innerText = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    document.getElementById("minutes").innerText = Math.floor((distance / 1000 / 60) % 60);
-    document.getElementById("seconds").innerText = Math.floor((distance / 1000) % 60);
+    const d = weddingDate - now;
+    days.innerText = Math.floor(d / (1000 * 60 * 60 * 24));
+    hours.innerText = Math.floor((d / (1000 * 60 * 60)) % 24);
+    minutes.innerText = Math.floor((d / 1000 / 60) % 60);
+    seconds.innerText = Math.floor((d / 1000) % 60);
 }, 1000);
 </script>
 
