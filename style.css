@@ -1,4 +1,6 @@
 :root {
+    --beige: #d7b7a8;
+    --beige-hover: #c49a86;
     --marron: #b0836f;
     --fondo: #faf7f2;
     --destacado: #fef7f5;
@@ -16,7 +18,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--marron);
+    background: var(--beige);
     z-index: 1000;
 }
 
@@ -41,10 +43,15 @@ body {
     font-weight: bold;
 }
 
+.menu a:hover {
+    opacity: 0.85;
+}
+
 .burger {
     display: none;
     font-size: 1.8rem;
     color: white;
+    cursor: pointer;
 }
 
 /* CONTAINER */
@@ -86,7 +93,7 @@ body {
     background: var(--destacado);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding-bottom: 50px;
+    padding-bottom: 55px;
 }
 
 /* IMAGES */
@@ -120,13 +127,17 @@ body {
 /* BUTTONS */
 .btn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 18px;
     padding: 10px 22px;
-    background: var(--marron);
+    background: var(--beige);
     color: white;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
+}
+
+.btn:hover {
+    background: var(--beige-hover);
 }
 
 /* MAP */
@@ -162,7 +173,7 @@ details summary {
 
 /* FOOTER */
 footer {
-    background: var(--marron);
+    background: var(--beige);
     color: white;
     padding: 20px;
 }
@@ -185,7 +196,7 @@ footer {
         display: none;
         position: fixed;
         inset: 0;
-        background: var(--marron);
+        background: var(--beige);
         flex-direction: column;
         justify-content: center;
         gap: 25px;
