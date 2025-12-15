@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .menu a {
@@ -28,6 +29,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     padding: 8px 14px;
+    transition: background 0.3s ease;
 }
 
 .menu a:hover {
@@ -51,13 +53,25 @@ body {
     flex-direction: column;
     justify-content: center;
     color: white;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+.hero * {
+    position: relative;
 }
 
 .hero-names {
     font-family: 'Great Vibes', cursive;
     font-size: 4rem;
     margin-bottom: 10px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
 .hero-date {
@@ -74,6 +88,15 @@ body {
 .section-box h2 {
     color: #b0836f;
     font-size: 2rem;
+}
+
+/* SEPARADOR */
+.section-divider {
+    width: 120px;
+    height: 1px;
+    background-color: #b0836f;
+    margin: 40px auto;
+    opacity: 0.4;
 }
 
 /* IMÁGENES */
@@ -123,10 +146,13 @@ body {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
 }
 
 .btn:hover {
     background-color: #b0836f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
 /* DESTACADO */
@@ -150,6 +176,12 @@ iframe {
     margin-top: 20px;
 }
 
+#countdown div {
+    background: #fef7f5;
+    padding: 15px 10px;
+    border-radius: 8px;
+}
+
 #countdown span {
     font-size: 2rem;
     color: #b0836f;
@@ -164,8 +196,13 @@ details summary {
     margin: 15px 0;
 }
 
+details[open] summary {
+    opacity: 0.8;
+}
+
 details p {
     margin: 10px 0 20px;
+    transition: all 0.3s ease;
 }
 
 /* FOOTER */
@@ -189,13 +226,9 @@ footer {
     .hero-names {
         font-size: 3rem;
     }
-}
 
-/* SEPARADOR ENTRE SECCIONES */
-.section-divider {
-    width: 120px;
-    height: 1px;
-    background-color: #b0836f;
-    margin: 40px auto;
-    opacity: 0.4;
+    .menu a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
 }
