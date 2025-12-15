@@ -16,21 +16,16 @@
 
         <nav id="nav">
             <ul>
-                <li><a href="#inicio" data-i18n="inicio">Inicio</a></li>
-                <li><a href="#contador" data-i18n="contador">Cuenta atrás</a></li>
-                <li><a href="#preboda" data-i18n="preboda">Preboda</a></li>
-                <li><a href="#boda" data-i18n="boda">Boda</a></li>
-                <li><a href="#llegar" data-i18n="llegar">Cómo llegar</a></li>
-                <li><a href="#asistencia" data-i18n="asistencia">Asistencia</a></li>
-                <li><a href="#musica" data-i18n="musica">Canciones</a></li>
-                <li><a href="#faq" data-i18n="faq">FAQ</a></li>
+                <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="#contador" onclick="closeMenu()">Cuenta atrás</a></li>
+                <li><a href="#preboda" onclick="closeMenu()">Preboda</a></li>
+                <li><a href="#boda" onclick="closeMenu()">Boda</a></li>
+                <li><a href="#llegar" onclick="closeMenu()">Cómo llegar</a></li>
+                <li><a href="#asistencia" onclick="closeMenu()">Asistencia</a></li>
+                <li><a href="#musica" onclick="closeMenu()">Canciones</a></li>
+                <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
             </ul>
         </nav>
-
-        <div class="lang-switch">
-            <button onclick="setLang('es')">ES</button>
-            <button onclick="setLang('en')">EN</button>
-        </div>
 
         <div class="burger" onclick="toggleMenu()">☰</div>
     </div>
@@ -40,25 +35,25 @@
 
     <section id="inicio" class="hero reveal">
         <h1 class="hero-names">Paula & Jorge</h1>
-        <p class="hero-date" data-i18n="fecha">12 de septiembre de 2026</p>
+        <p class="hero-date">12 de septiembre de 2026</p>
     </section>
 
     <div class="section-divider"></div>
 
     <section id="contador" class="section-box reveal">
-        <h2 data-i18n="contador">Cuenta atrás</h2>
+        <h2>Cuenta atrás</h2>
         <div id="countdown">
-            <div><span id="days"></span><span data-i18n="dias">Días</span></div>
-            <div><span id="hours"></span><span data-i18n="horas">Horas</span></div>
-            <div><span id="minutes"></span><span data-i18n="minutos">Minutos</span></div>
-            <div><span id="seconds"></span><span data-i18n="segundos">Segundos</span></div>
+            <div><span id="days"></span>Días</div>
+            <div><span id="hours"></span>Horas</div>
+            <div><span id="minutes"></span>Minutos</div>
+            <div><span id="seconds"></span>Segundos</div>
         </div>
     </section>
 
     <div class="section-divider"></div>
 
     <section class="section-box reveal">
-        <h2 data-i18n="galeria">Galería</h2>
+        <h2>Galería</h2>
         <div class="gallery">
             <img src="foto1.jpg">
             <img src="foto2.jpg">
@@ -68,8 +63,9 @@
     </section>
 
     <footer>
-        <p data-i18n="footer">Con cariño, Paula & Jorge ❤️</p>
+        <p>Con cariño, Paula & Jorge ❤️</p>
     </footer>
+
 </div>
 
 <div id="lightbox" onclick="closeLightbox()">
@@ -81,14 +77,16 @@
 function toggleMenu() {
     document.body.classList.toggle('menu-open');
 }
+function closeMenu() {
+    document.body.classList.remove('menu-open');
+}
 
-/* SCROLL ANIMATIONS */
-const reveals = document.querySelectorAll('.reveal');
-window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) el.classList.add('active');
+/* SCROLL */
+document.querySelectorAll('.reveal').forEach(el => {
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => e.isIntersecting && el.classList.add('active'));
     });
+    obs.observe(el);
 });
 
 /* LIGHTBOX */
@@ -105,54 +103,12 @@ function closeLightbox() {
 /* COUNTDOWN */
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
 setInterval(() => {
-    const d = weddingDate - new Date().getTime();
+    const d = weddingDate - Date.now();
     days.innerText = Math.floor(d / 86400000);
     hours.innerText = Math.floor(d / 3600000 % 24);
     minutes.innerText = Math.floor(d / 60000 % 60);
     seconds.innerText = Math.floor(d / 1000 % 60);
 }, 1000);
-
-/* I18N */
-const texts = {
-    es: {
-        inicio: "Inicio",
-        contador: "Cuenta atrás",
-        preboda: "Preboda",
-        boda: "Boda",
-        llegar: "Cómo llegar",
-        asistencia: "Asistencia",
-        musica: "Canciones",
-        faq: "Preguntas frecuentes",
-        galeria: "Galería",
-        dias: "Días",
-        horas: "Horas",
-        minutos: "Minutos",
-        segundos: "Segundos",
-        footer: "Con cariño, Paula & Jorge ❤️"
-    },
-    en: {
-        inicio: "Home",
-        contador: "Countdown",
-        preboda: "Pre-wedding",
-        boda: "Wedding",
-        llegar: "How to get there",
-        asistencia: "RSVP",
-        musica: "Music",
-        faq: "FAQ",
-        galeria: "Gallery",
-        dias: "Days",
-        horas: "Hours",
-        minutos: "Minutes",
-        segundos: "Seconds",
-        footer: "With love, Paula & Jorge ❤️"
-    }
-};
-
-function setLang(lang) {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        el.innerText = texts[lang][el.dataset.i18n];
-    });
-}
 </script>
 
 </body>
