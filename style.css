@@ -239,4 +239,33 @@ footer {
     .hero-names {
         font-size: 3rem;
     }
+
+/* NUEVO: scroll suave */
+html {
+    scroll-behavior: smooth;
 }
+
+/* NUEVO: fecha hero destacada */
+.hero-date {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* NUEVO: animación botones */
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* NUEVO: menú activo */
+.menu a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+}
+
+    }
