@@ -43,6 +43,20 @@ body {
     font-weight: bold;
 }
 
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .burger {
     display: none;
     font-size: 1.8rem;
@@ -66,6 +80,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 15px;
 }
 
 .hero-names {
@@ -82,6 +97,14 @@ body {
 .section h2 {
     color: var(--marron);
     font-size: 2rem;
+}
+
+.section-divider {
+    width: 120px;
+    height: 1px;
+    background: var(--marron);
+    margin: 60px auto;
+    opacity: 0.4;
 }
 
 /* DESTACADO */
@@ -120,11 +143,6 @@ body {
     object-fit: contain;
 }
 
-.pie-imagen {
-    font-style: italic;
-    margin-top: 12px;
-}
-
 /* BUTTONS */
 .btn {
     display: inline-block;
@@ -148,7 +166,6 @@ iframe {
     border: 0;
     border-radius: 10px;
     margin: 20px 0;
-    display: block;
 }
 
 /* COUNTDOWN */
@@ -189,15 +206,6 @@ footer {
 .reveal.active {
     opacity: 1;
     transform: none;
-}
-
-/* SEPARADOR */
-.section-divider {
-    width: 120px;
-    height: 1px;
-    background: var(--marron);
-    opacity: 0.35;
-    margin: 10px auto 40px;
 }
 
 /* MOBILE */
