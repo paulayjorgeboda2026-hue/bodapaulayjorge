@@ -1,6 +1,6 @@
 :root {
-    --beige: #e8d6cc;        /* MÁS CLARO */
-    --beige-hover: #d8bfb2; /* hover suave */
+    --beige: #e8d6cc;
+    --beige-hover: #d8bfb2;
     --marron: #b0836f;
     --fondo: #faf7f2;
     --destacado: #fef7f5;
@@ -120,6 +120,11 @@ body {
     object-fit: contain;
 }
 
+.pie-imagen {
+    font-style: italic;
+    margin-top: 12px;
+}
+
 /* BUTTONS */
 .btn {
     display: inline-block;
@@ -184,6 +189,15 @@ footer {
 .reveal.active {
     opacity: 1;
     transform: none;
+}
+
+/* SEPARADOR */
+.section-divider {
+    width: 120px;
+    height: 1px;
+    background: var(--marron);
+    opacity: 0.35;
+    margin: 10px auto 40px;
 }
 
 /* MOBILE */
