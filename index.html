@@ -57,10 +57,10 @@
         <h2 data-es="Cuenta atrás" data-en="Countdown">Cuenta atrás</h2>
 
         <div id="countdown">
-            <div><span id="days"></span><small data-es="Días" data-en="Days">Días</small></div>
-            <div><span id="hours"></span><small data-es="Horas" data-en="Hours">Horas</small></div>
-            <div><span id="minutes"></span><small data-es="Minutos" data-en="Minutes">Minutos</small></div>
-            <div><span id="seconds"></span><small data-es="Segundos" data-en="Seconds">Segundos</small></div>
+            <div><span id="days">0</span><small data-es="Días" data-en="Days">Días</small></div>
+            <div><span id="hours">0</span><small data-es="Horas" data-en="Hours">Horas</small></div>
+            <div><span id="minutes">0</span><small data-es="Minutos" data-en="Minutes">Minutos</small></div>
+            <div><span id="seconds">0</span><small data-es="Segundos" data-en="Seconds">Segundos</small></div>
         </div>
 
         <a class="btn calendar-btn" target="_blank"
@@ -116,8 +116,6 @@
                    17:00 · Ceremonia
                 </p>
                 <a class="btn" target="_blank"
-                   data-es="Santuario de la Quinta Angustia"
-                   data-en="Santuario de la Quinta Angustia"
                    href="https://www.google.com/maps/place/Santuario+de+Quinta+Angustia">
                    Santuario de la Quinta Angustia
                 </a>
@@ -133,8 +131,6 @@
                    19:00 · Celebración
                 </p>
                 <a class="btn" target="_blank"
-                   data-es="Palacio de Canedo"
-                   data-en="Palacio de Canedo"
                    href="https://pradaatope.com.es/">
                    Palacio de Canedo
                 </a>
@@ -153,8 +149,6 @@
             allowfullscreen loading="lazy"></iframe>
 
         <a class="btn" target="_blank"
-           data-es="Abrir en Google Maps"
-           data-en="Open in Google Maps"
            href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/">
            Abrir en Google Maps
         </a>
@@ -168,8 +162,6 @@
            Nos hace mucha ilusión contar contigo.
         </p>
         <a class="btn" target="_blank"
-           data-es="Confirmar asistencia"
-           data-en="Confirm attendance"
            href="https://forms.gle/Hwt1L5NKvezR9eD18">
            Confirmar asistencia
         </a>
@@ -183,8 +175,6 @@
            ¿Qué canción no puede faltar?
         </p>
         <a class="btn" target="_blank"
-           data-es="Sugerir canción"
-           data-en="Suggest a song"
            href="https://forms.gle/PJSDJ1ixuKXTJE9g9">
            Sugerir canción
         </a>
@@ -206,31 +196,18 @@
         </h2>
 
         <details>
-            <summary data-es="¿Hay parking cerca?" data-en="Is there parking nearby?">
-                ¿Hay parking cerca?
-            </summary>
-            <p data-es="Sí, hay zonas de aparcamiento cercanas."
-               data-en="Yes, there are parking areas nearby.">
-               Sí, hay zonas de aparcamiento cercanas.
-            </p>
+            <summary>¿Hay parking cerca?</summary>
+            <p>Sí, hay zonas de aparcamiento cercanas.</p>
         </details>
 
         <details>
-            <summary data-es="¿Hay dress code?" data-en="Is there a dress code?">
-                ¿Hay dress code?
-            </summary>
-            <p data-es="Elegante, pero cómodo."
-               data-en="Elegant but comfortable.">
-               Elegante, pero cómodo.
-            </p>
+            <summary>¿Hay dress code?</summary>
+            <p>Elegante, pero cómodo.</p>
         </details>
     </section>
 
     <footer>
-        <p data-es="Con cariño, Paula & Jorge 🤍"
-           data-en="With love, Paula & Jorge 🤍">
-           Con cariño, Paula & Jorge 🤍
-        </p>
+        <p>Con cariño, Paula & Jorge 🤍</p>
     </footer>
 
 </div>
@@ -254,12 +231,26 @@ function setLang(lang) {
 }
 
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
+const fields = ["days","hours","minutes","seconds"];
+
 setInterval(() => {
     const d = weddingDate - Date.now();
-    days.innerText = Math.floor(d / 86400000);
-    hours.innerText = Math.floor((d / 3600000) % 24);
-    minutes.innerText = Math.floor((d / 60000) % 60);
-    seconds.innerText = Math.floor((d / 1000) % 60);
+    const values = {
+        days: Math.floor(d / 86400000),
+        hours: Math.floor((d / 3600000) % 24),
+        minutes: Math.floor((d / 60000) % 60),
+        seconds: Math.floor((d / 1000) % 60)
+    };
+
+    fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (el.innerText != values[id]) {
+            el.classList.remove("tick");
+            void el.offsetWidth;
+            el.innerText = values[id];
+            el.classList.add("tick");
+        }
+    });
 }, 1000);
 
 document.querySelectorAll(".reveal").forEach(el => {
