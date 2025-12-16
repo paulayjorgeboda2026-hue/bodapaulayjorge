@@ -43,6 +43,11 @@ body {
     font-weight: bold;
 }
 
+.menu a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+}
+
 .menu-right {
     display: flex;
     align-items: center;
@@ -62,6 +67,15 @@ body {
     font-size: 1.8rem;
     color: white;
     cursor: pointer;
+}
+
+/* HEADER DATE */
+.header-date {
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 /* CONTAINER */
@@ -86,6 +100,12 @@ body {
 .hero-names {
     font-family: 'Great Vibes', cursive;
     font-size: 4rem;
+}
+
+.hero-date {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
 /* SECTIONS */
@@ -153,10 +173,13 @@ body {
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
     background: var(--beige-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
 /* MAP */
@@ -208,6 +231,11 @@ footer {
     transform: none;
 }
 
+/* SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
     .menu ul {
@@ -240,32 +268,7 @@ footer {
         font-size: 3rem;
     }
 
-/* NUEVO: scroll suave */
-html {
-    scroll-behavior: smooth;
-}
-
-/* NUEVO: fecha hero destacada */
-.hero-date {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    opacity: 0.9;
-}
-
-/* NUEVO: animación botones */
-.btn {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-}
-
-/* NUEVO: menú activo */
-.menu a.active {
-    border-bottom: 2px solid white;
-    padding-bottom: 3px;
-}
-
+    .header-date {
+        display: none;
     }
+}
