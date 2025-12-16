@@ -69,15 +69,6 @@ body {
     cursor: pointer;
 }
 
-/* HEADER DATE */
-.header-date {
-    color: white;
-    font-weight: bold;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
 /* CONTAINER */
 .container {
     max-width: 1000px;
@@ -94,12 +85,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .hero-names {
     font-family: 'Great Vibes', cursive;
     font-size: 4rem;
+}
+
+.hero-range {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    opacity: 0.95;
 }
 
 .hero-date {
@@ -266,9 +263,5 @@ html {
 
     .hero-names {
         font-size: 3rem;
-    }
-
-    .header-date {
-        display: none;
     }
 }
