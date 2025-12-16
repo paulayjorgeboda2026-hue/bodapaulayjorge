@@ -16,18 +16,25 @@
 
         <nav>
             <ul id="menu-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#contador">Cuenta atrás</a></li>
-                <li><a href="#preboda">Preboda</a></li>
-                <li><a href="#boda">Boda</a></li>
-                <li><a href="#llegar">Cómo llegar</a></li>
-                <li><a href="#asistencia">Asistencia</a></li>
-                <li><a href="#musica">Canciones</a></li>
+                <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+                <li><a href="#contador" data-es="Cuenta atrás" data-en="Countdown">Cuenta atrás</a></li>
+                <li><a href="#preboda" data-es="Preboda" data-en="Pre-wedding">Preboda</a></li>
+                <li><a href="#boda" data-es="Boda" data-en="Wedding">Boda</a></li>
+                <li><a href="#llegar" data-es="Cómo llegar" data-en="How to get there">Cómo llegar</a></li>
+                <li><a href="#asistencia" data-es="Asistencia" data-en="RSVP">Asistencia</a></li>
+                <li><a href="#musica" data-es="Canciones" data-en="Music">Canciones</a></li>
+                <li><a href="#alojamientos" data-es="Alojamientos" data-en="Accommodation">Alojamientos</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
 
-        <div class="burger" onclick="toggleMenu()">☰</div>
+        <div class="menu-right">
+            <div class="lang">
+                <button onclick="setLang('es')">ES</button> |
+                <button onclick="setLang('en')">EN</button>
+            </div>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+        </div>
     </div>
 </header>
 
@@ -36,19 +43,26 @@
     <!-- HERO -->
     <section id="inicio" class="hero reveal">
         <h1 class="hero-names">Paula & Jorge</h1>
-        <p class="hero-date">12 de septiembre de 2026</p>
+        <p class="hero-date" data-es="12 de septiembre de 2026" data-en="September 12th, 2026">
+            12 de septiembre de 2026
+        </p>
+
+        <a class="btn calendar-btn" target="_blank"
+           href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Paula+y+Jorge&dates=20260912T150000Z/20260912T230000Z&details=Celebramos+nuestra+boda&location=Cacabelos">
+            Añadir al calendario
+        </a>
     </section>
 
     <div class="section-divider"></div>
 
     <!-- CUENTA ATRÁS -->
     <section id="contador" class="section reveal">
-        <h2>Cuenta atrás</h2>
+        <h2 data-es="Cuenta atrás" data-en="Countdown">Cuenta atrás</h2>
         <div id="countdown">
-            <div><span id="days"></span>Días</div>
-            <div><span id="hours"></span>Horas</div>
-            <div><span id="minutes"></span>Minutos</div>
-            <div><span id="seconds"></span>Segundos</div>
+            <div><span id="days"></span><small data-es="Días" data-en="Days">Días</small></div>
+            <div><span id="hours"></span><small data-es="Horas" data-en="Hours">Horas</small></div>
+            <div><span id="minutes"></span><small data-es="Minutos" data-en="Minutes">Minutos</small></div>
+            <div><span id="seconds"></span><small data-es="Segundos" data-en="Seconds">Segundos</small></div>
         </div>
     </section>
 
@@ -56,15 +70,14 @@
 
     <!-- PREBODA -->
     <section id="preboda" class="section reveal">
-        <h2>Preboda</h2>
-        <p>Viernes 11 de septiembre</p>
+        <h2 data-es="Preboda" data-en="Pre-wedding">Preboda</h2>
+        <p data-es="Viernes 11 de septiembre" data-en="Friday, September 11th">Viernes 11 de septiembre</p>
 
         <img src="miralrío.png" class="section-image" alt="Preboda">
 
         <p class="pie-imagen">20:00 · Preboda</p>
 
-        <a class="btn" target="_blank"
-           href="https://hotelmiralriocacabelos.com/">
+        <a class="btn" target="_blank" href="https://hotelmiralriocacabelos.com/">
             Hotel Miralrío
         </a>
     </section>
@@ -73,8 +86,8 @@
 
     <!-- BODA -->
     <section id="boda" class="section reveal">
-        <h2>Boda</h2>
-        <p>Sábado 12 de septiembre</p>
+        <h2 data-es="Boda" data-en="Wedding">Boda</h2>
+        <p data-es="Sábado 12 de septiembre" data-en="Saturday, September 12th">Sábado 12 de septiembre</p>
 
         <div class="boda-columnas">
             <div class="boda-col">
@@ -104,14 +117,11 @@
 
     <!-- CÓMO LLEGAR -->
     <section id="llegar" class="section destacado reveal">
-        <h2>Cómo llegar</h2>
+        <h2 data-es="Cómo llegar" data-en="How to get there">Cómo llegar</h2>
 
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.235504123832!2d-6.734897!3d42.59947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30be6d0d3d13cf%3A0xa9e9860024e5292d!2s24540%20Cacabelos%2C%20Le%C3%B3n!5e0!3m2!1ses!2ses!4v1710000000000"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+            allowfullscreen loading="lazy"></iframe>
 
         <a class="btn" target="_blank"
            href="https://www.google.com/maps/place/24540+Cacabelos,+Le%C3%B3n/">
@@ -119,31 +129,29 @@
         </a>
     </section>
 
-    <div class="section-divider"></div>
-
     <!-- ASISTENCIA -->
     <section id="asistencia" class="section destacado reveal">
-        <h2>Confirmación de asistencia</h2>
-        <p>Nos hace mucha ilusión contar contigo. Te agradeceríamos que dediques un momento a completar esta encuesta y ayudarnos a organizarlo todo con el máximo cariño.</p>
-        <a class="btn" target="_blank"
-           href="https://forms.gle/Hwt1L5NKvezR9eD18">
+        <h2 data-es="Confirmación de asistencia" data-en="RSVP">Confirmación de asistencia</h2>
+        <p>Nos hace mucha ilusión contar contigo.</p>
+        <a class="btn" target="_blank" href="https://forms.gle/Hwt1L5NKvezR9eD18">
             Confirmar asistencia
         </a>
     </section>
 
-    <div class="section-divider"></div>
-
     <!-- MÚSICA -->
     <section id="musica" class="section destacado reveal">
-        <h2>Ayúdanos con la música</h2>
+        <h2 data-es="Ayúdanos con la música" data-en="Help us with the music">Ayúdanos con la música</h2>
         <p>¿Qué canción no puede faltar?</p>
-        <a class="btn" target="_blank"
-           href="https://forms.gle/PJSDJ1ixuKXTJE9g9">
+        <a class="btn" target="_blank" href="https://forms.gle/PJSDJ1ixuKXTJE9g9">
             Sugerir canción
         </a>
     </section>
 
-    <div class="section-divider"></div>
+    <!-- ALOJAMIENTOS -->
+    <section id="alojamientos" class="section destacado reveal">
+        <h2 data-es="Alojamientos" data-en="Accommodation">Alojamientos</h2>
+        <p>Próximamente compartiremos recomendaciones de hoteles y casas rurales.</p>
+    </section>
 
     <!-- FAQ -->
     <section id="faq" class="section destacado reveal">
@@ -176,6 +184,13 @@ document.querySelectorAll('#menu-links a').forEach(link => {
         document.body.classList.remove('menu-open');
     });
 });
+
+function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-es]').forEach(el => {
+        el.innerText = el.dataset[lang];
+    });
+}
 
 const weddingDate = new Date("September 12, 2026 17:00:00").getTime();
 setInterval(() => {
