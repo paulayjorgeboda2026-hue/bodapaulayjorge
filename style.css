@@ -306,3 +306,6 @@ html {
     border-radius: 8px;
     margin: 12px 0 15px 0;
 }
+
+/* 👇 ESTA LLAVE CIERRA EL @media */
+}
