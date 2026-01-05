@@ -260,14 +260,19 @@ html {
     .section-image {
         width: 80%;
     }
-   /* ALOJAMIENTOS - SCROLL HORIZONTAL */
+   /* ALOJAMIENTOS - SCROLL HORIZONTAL CENTRADO */
 .alojamientos-columnas {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     overflow-x: auto;
-    padding: 20px 10px;
+    padding: 30px 20px;
     scroll-snap-type: x mandatory;
+    scroll-padding-inline: 50%;
     -webkit-overflow-scrolling: touch;
+
+    /* IMPORTANTE: rompe el centrado del container */
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .alojamiento {
@@ -276,9 +281,11 @@ html {
     border-radius: 12px;
     padding: 25px 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    scroll-snap-align: start;
+
+    scroll-snap-align: center;
 }
 
+/* Scrollbar suave */
 .alojamientos-columnas::-webkit-scrollbar {
     height: 8px;
 }
