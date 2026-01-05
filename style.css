@@ -233,8 +233,28 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ===============================
+   ALOJAMIENTOS – DESKTOP
+================================ */
+
+.alojamiento {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.alojamiento-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 14px 0 18px 0;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
+
     .menu ul {
         display: none;
         position: fixed;
@@ -260,51 +280,61 @@ html {
     .section-image {
         width: 80%;
     }
-/* ALOJAMIENTOS - SCROLL HORIZONTAL FORZADO */
-.horizontal-scroll {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-    gap: 24px;
-    padding: 30px 20px;
 
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 50%;
+    /* ALOJAMIENTOS - SCROLL HORIZONTAL */
+    .horizontal-scroll {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        gap: 24px;
+        padding: 30px 20px;
 
-    -webkit-overflow-scrolling: touch;
-}
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 50%;
 
-.horizontal-scroll .alojamiento {
-    flex: 0 0 260px;
-    scroll-snap-align: center;
-}
+        -webkit-overflow-scrolling: touch;
+        text-align: left;
+    }
 
-/* Evita que el centrado global rompa el layout */
-.horizontal-scroll {
-    text-align: left;
-}
+    .horizontal-scroll .alojamiento {
+        flex: 0 0 260px;
+        scroll-snap-align: center;
+        position: relative;
+        text-align: center;
+    }
 
-/* Scrollbar (opcional, visible en desktop) */
-.horizontal-scroll::-webkit-scrollbar {
-    height: 8px;
-}
+    /* Imagenes más compactas en móvil */
+    .alojamiento-img {
+        height: 140px;
+    }
 
-.horizontal-scroll::-webkit-scrollbar-thumb {
-    background: var(--beige);
-    border-radius: 10px;
-}
+    /* Separador vertical */
+    .horizontal-scroll .alojamiento::after {
+        content: "";
+        position: absolute;
+        top: 15%;
+        right: -12px;
+        width: 1px;
+        height: 70%;
+        background: rgba(176, 131, 111, 0.35);
+    }
 
-.horizontal-scroll::-webkit-scrollbar-track {
-    background: transparent;
-}
-/* IMÁGENES ALOJAMIENTOS */
-.alojamiento-img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 12px 0 15px 0;
-}
+    .horizontal-scroll .alojamiento:last-child::after {
+        display: none;
+    }
 
+    /* Scrollbar */
+    .horizontal-scroll::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+        background: var(--beige);
+        border-radius: 10px;
+    }
+
+    .horizontal-scroll::-webkit-scrollbar-track {
+        background: transparent;
+    }
 }
