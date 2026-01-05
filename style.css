@@ -260,41 +260,41 @@ html {
     .section-image {
         width: 80%;
     }
-   /* ALOJAMIENTOS - SCROLL HORIZONTAL CENTRADO */
-.alojamientos-columnas {
-    display: flex;
-    gap: 24px;
+/* ALOJAMIENTOS - SCROLL HORIZONTAL FORZADO */
+.horizontal-scroll {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     overflow-x: auto;
+    gap: 24px;
     padding: 30px 20px;
+
     scroll-snap-type: x mandatory;
     scroll-padding-inline: 50%;
-    -webkit-overflow-scrolling: touch;
 
-    /* IMPORTANTE: rompe el centrado del container */
-    justify-content: flex-start;
-    text-align: left;
+    -webkit-overflow-scrolling: touch;
 }
 
-.alojamiento {
+.horizontal-scroll .alojamiento {
     flex: 0 0 260px;
-    background: white;
-    border-radius: 12px;
-    padding: 25px 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
     scroll-snap-align: center;
 }
 
-/* Scrollbar suave */
-.alojamientos-columnas::-webkit-scrollbar {
+/* Evita que el centrado global rompa el layout */
+.horizontal-scroll {
+    text-align: left;
+}
+
+/* Scrollbar (opcional, visible en desktop) */
+.horizontal-scroll::-webkit-scrollbar {
     height: 8px;
 }
 
-.alojamientos-columnas::-webkit-scrollbar-thumb {
+.horizontal-scroll::-webkit-scrollbar-thumb {
     background: var(--beige);
     border-radius: 10px;
 }
 
-.alojamientos-columnas::-webkit-scrollbar-track {
+.horizontal-scroll::-webkit-scrollbar-track {
     background: transparent;
 }
