@@ -260,35 +260,34 @@ html {
     .section-image {
         width: 80%;
     }
-    /* ALOJAMIENTOS */
+   /* ALOJAMIENTOS - SCROLL HORIZONTAL */
 .alojamientos-columnas {
     display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .alojamiento {
+    flex: 0 0 260px;
     background: white;
     border-radius: 12px;
     padding: 25px 20px;
-    width: 280px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    scroll-snap-align: start;
 }
 
-.alojamiento h3 {
-    color: var(--marron);
-    margin-bottom: 12px;
+.alojamientos-columnas::-webkit-scrollbar {
+    height: 8px;
 }
 
-.alojamiento p {
-    font-size: 0.95rem;
-    line-height: 1.4;
+.alojamientos-columnas::-webkit-scrollbar-thumb {
+    background: var(--beige);
+    border-radius: 10px;
 }
 
-
-    .hero-names {
-        font-size: 3rem;
-    }
+.alojamientos-columnas::-webkit-scrollbar-track {
+    background: transparent;
 }
