@@ -298,3 +298,11 @@ html {
 .horizontal-scroll::-webkit-scrollbar-track {
     background: transparent;
 }
+/* IMÁGENES ALOJAMIENTOS */
+.alojamiento-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 12px 0 15px 0;
+}
