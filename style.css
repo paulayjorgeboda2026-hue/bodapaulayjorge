@@ -87,10 +87,12 @@ body {
     justify-content: center;
     gap: 10px;
 
-    /* 🔽 CAMBIO DESKTOP */
     align-items: flex-end;
     text-align: right;
     padding-right: 40px;
+
+    /* 🔽 AJUSTE ALTURA CARAS – DESKTOP */
+    transform: translateY(-20px);
 }
 
 .hero-names {
@@ -100,8 +102,6 @@ body {
     margin-top: 0;
     margin-bottom: 4px;
     text-shadow: none;
-
-    /* 🔽 CAMBIO */
     max-width: 420px;
 }
 
@@ -110,8 +110,6 @@ body {
     font-size: 0.95rem;
     color: #4a3b2f;
     text-shadow: none;
-
-    /* 🔽 CAMBIO */
     max-width: 420px;
 }
 
@@ -307,7 +305,6 @@ html {
         width: 80%;
     }
 
-    /* ALOJAMIENTOS - SCROLL HORIZONTAL */
     .horizontal-scroll {
         display: flex !important;
         flex-direction: row !important;
@@ -315,10 +312,8 @@ html {
         overflow-x: auto;
         gap: 24px;
         padding: 30px 20px;
-
         scroll-snap-type: x mandatory;
         scroll-padding-inline: 50%;
-
         -webkit-overflow-scrolling: touch;
         text-align: left;
     }
@@ -376,10 +371,12 @@ html {
         padding-top: 55px;
         background-position: center 18%;
 
-        /* 🔽 CAMBIO MÓVIL */
         align-items: flex-end;
         text-align: right;
         padding-right: 20px;
+
+        /* 🔽 AJUSTE ALTURA CARAS – MÓVIL */
+        transform: translateY(-12px);
     }
 
     .hero-names {
