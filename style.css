@@ -366,23 +366,24 @@ html {
 
     .hero {
         justify-content: flex-start;
-        padding-top: 55px;               /* sube todo el bloque */
-        background-position: center 18%; /* ajusta la foto */
+        padding-top: 55px;
+        background-position: center 18%;
     }
 
     .hero-names {
         font-family: 'Playfair Display', serif;
         font-size: 2.6rem;
-        color: var(--marron);
+        color: #c08a5a;      /* ← color exacto como en la foto */
         margin-top: 0;
         margin-bottom: 4px;
-        text-shadow: none;               /* ❌ sin difuminado */
+        text-shadow: none;
     }
 
     .hero-range {
-        margin-top: -6px;                /* fechas justo encima */
+        margin-top: -6px;
         font-size: 0.95rem;
-        color: #b48f7f;
-        text-shadow: none;               /* ❌ sin difuminado */
+        color: #c08a5a;      /* ← mismo tono, coherencia total */
+        text-shadow: none;
     }
 }
+
