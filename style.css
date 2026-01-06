@@ -80,7 +80,7 @@ body {
 /* HERO */
 .hero {
     height: 60vh;
-    background: url("fotoportada3.jpg") center 35% / cover no-repeat;
+    background: url("fotoportada2.jpeg") center 35% / cover no-repeat;
     color: white;
     display: flex;
     flex-direction: column;
@@ -386,4 +386,3 @@ html {
         text-shadow: none;               /* ❌ sin difuminado */
     }
 }
-
