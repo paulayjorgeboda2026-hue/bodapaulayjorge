@@ -91,7 +91,6 @@ body {
     text-align: right;
     padding-right: 40px;
 
-    /* 🔽 AJUSTE ALTURA CARAS – DESKTOP */
     transform: translateY(-20px);
 }
 
@@ -111,12 +110,6 @@ body {
     color: #000;
     text-shadow: none;
     max-width: 420px;
-}
-
-.hero-date {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    opacity: 0.9;
 }
 
 /* SECTIONS */
@@ -149,8 +142,21 @@ body {
 /* IMAGES */
 .section-image {
     width: 55%;
-    max-width: 420px;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
     margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.alojamiento-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 14px 0 18px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* BODA */
@@ -162,7 +168,7 @@ body {
 }
 
 .boda-img-wrapper {
-    height: 260px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,30 +221,23 @@ iframe {
     display: block;
 }
 
-/* FAQ */
-details summary {
-    font-weight: bold;
-    color: var(--marron);
-    cursor: pointer;
-    margin: 15px 0;
-}
-
 /* FOOTER */
 footer {
     background: var(--beige);
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .footer-text {
     max-width: 800px;
     margin: 0 auto;
-    color: #333; /* Texto en negro */
-    line-height: 1.6;
+    color: #333;
+    line-height: 1.7;
+    font-size: 1.05rem;
 }
 
 .footer-text p {
-    margin: 16px 0;
+    margin: 20px 0;
 }
 
 /* ANIMATION */
@@ -258,23 +257,13 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ===============================
-   ALOJAMIENTOS – DESKTOP
-================================ */
-
+/* ALOJAMIENTOS – DESKTOP */
 .alojamiento {
     background: white;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.alojamiento-img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 14px 0 18px 0;
+    min-width: 300px;
 }
 
 /* INDICADOR DESLIZA */
@@ -313,7 +302,8 @@ html {
     }
 
     .section-image {
-        width: 80%;
+        width: 90%;
+        max-width: none;
     }
 
     .horizontal-scroll {
@@ -330,14 +320,14 @@ html {
     }
 
     .horizontal-scroll .alojamiento {
-        flex: 0 0 260px;
+        flex: 0 0 280px;
         scroll-snap-align: center;
         position: relative;
         text-align: center;
     }
 
     .alojamiento-img {
-        height: 140px;
+        height: 160px;
     }
 
     .horizontal-scroll .alojamiento::after {
@@ -373,12 +363,11 @@ html {
 
     .footer-text {
         padding: 0 20px;
+        font-size: 1rem;
     }
 }
 
-/* ===============================
-   HERO – AJUSTES PORTADA MÓVIL
-================================ */
+/* HERO – AJUSTES PORTADA MÓVIL */
 @media (max-width: 768px) {
 
     .hero {
@@ -390,12 +379,10 @@ html {
         text-align: right;
         padding-right: 20px;
 
-        /* 🔽 AJUSTE ALTURA CARAS – MÓVIL */
         transform: translateY(-12px);
     }
 
     .hero-names {
-        font-family: 'Playfair Display', serif;
         font-size: 2.6rem;
         color: #000;
         margin-top: 0;
