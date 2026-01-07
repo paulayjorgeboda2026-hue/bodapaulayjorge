@@ -296,12 +296,19 @@
     </section>
 
     <footer>
-        <p>
-            Estamos deseosos de que llegue el gran día. Habéis estado en nuestro pasado, estáis en nuestro presente y queremos que sigáis formando parte de nuestro futuro y de todos los pasos que demos juntos, en especial, el día de nuestra boda.<br><br>
-            Si queréis ayudarnos a empezar esta nueva etapa juntos, podéis hacerlo mediante transferencia bancaria:<br>
-            <strong>IBAN: ESXX XXXX XXXX XXXX XXXX</strong><br><br>
-            Con cariño, Paula y Jorge
-        </p>
+        <div class="footer-text">
+            <p data-es="Estamos deseosos de que llegue el gran día. Habéis estado en nuestro pasado, estáis en nuestro presente y queremos que sigáis formando parte de nuestro futuro y de todos los pasos que demos juntos, en especial, el día de nuestra boda."
+               data-en="We can't wait for the big day to arrive. You have been part of our past, you are in our present, and we want you to continue being part of our future and every step we take together, especially on our wedding day.">
+               Estamos deseosos de que llegue el gran día. Habéis estado en nuestro pasado, estáis en nuestro presente y queremos que sigáis formando parte de nuestro futuro y de todos los pasos que demos juntos, en especial, el día de nuestra boda.
+            </p>
+            <p data-es="Si queréis ayudarnos a empezar esta nueva etapa juntos, podéis hacerlo mediante transferencia bancaria:<br><strong>IBAN: ESXX XXXX XXXX XXXX XXXX</strong>"
+               data-en="If you would like to help us start this new chapter together, you can do so by bank transfer:<br><strong>IBAN: ESXX XXXX XXXX XXXX XXXX</strong>">
+               Si queréis ayudarnos a empezar esta nueva etapa juntos, podéis hacerlo mediante transferencia bancaria:<br><strong>IBAN: ESXX XXXX XXXX XXXX XXXX</strong>
+            </p>
+            <p data-es="Con cariño, Paula y Jorge" data-en="With love, Paula and Jorge">
+               Con cariño, Paula y Jorge
+            </p>
+        </div>
     </footer>
 
 </div>
@@ -320,7 +327,7 @@ document.querySelectorAll('#menu-links a').forEach(link => {
 function setLang(lang) {
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-es]').forEach(el => {
-        el.innerText = el.dataset[lang];
+        el.innerText = el.dataset[lang] || el.dataset['es'];
     });
 }
 
