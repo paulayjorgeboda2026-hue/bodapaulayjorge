@@ -226,16 +226,19 @@ details summary {
 /* FOOTER */
 footer {
     background: var(--beige);
-    color: white;
     padding: 40px 20px;
     text-align: center;
+}
+
+.footer-text {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333; /* Texto en negro */
     line-height: 1.6;
 }
 
-footer p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
+.footer-text p {
+    margin: 16px 0;
 }
 
 /* ANIMATION */
@@ -368,12 +371,8 @@ html {
         display: block;
     }
 
-    footer {
-        padding: 40px 20px;
-    }
-
-    footer p {
-        font-size: 1rem;
+    .footer-text {
+        padding: 0 20px;
     }
 }
 
