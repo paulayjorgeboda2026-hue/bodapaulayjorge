@@ -77,20 +77,18 @@ body {
     text-align: center;
 }
 
-/* HERO */
+/* HERO - Foto de portada ajustada para verse completa y bien centrada */
 .hero {
-    height: 60vh;
-    background: url("fotoportada2.jpeg") center 35% / cover no-repeat;
+    height: 70vh; /* Aumentado un poco para dar más espacio */
+    background: url("fotoportada2.jpeg") center 40% / cover no-repeat;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-
     align-items: flex-end;
     text-align: right;
     padding-right: 40px;
-
     transform: translateY(-20px);
 }
 
@@ -139,27 +137,14 @@ body {
     padding-bottom: 55px;
 }
 
-/* IMAGES */
+/* IMAGES - Preboda y boda SIN MODIFICAR (como antes) */
 .section-image {
     width: 55%;
-    max-width: 500px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;
+    max-width: 420px;
     margin-top: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.alojamiento-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 14px 0 18px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* BODA */
+/* BODA - Sin cambios */
 .boda-columnas {
     display: flex;
     gap: 50px;
@@ -168,7 +153,7 @@ body {
 }
 
 .boda-img-wrapper {
-    height: 300px;
+    height: 260px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,6 +163,19 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+
+/* ALOJAMIENTOS - Habitaciones ajustadas para verse completas */
+.alojamiento-img {
+    width: 100%;
+    height: 280px; /* Altura mayor en desktop para que quepa toda la imagen */
+    object-fit: contain; /* Muestra la imagen completa sin recortar */
+    object-position: center;
+    background: white; /* Fondo blanco por si la imagen tiene transparencia */
+    border-radius: 10px;
+    margin: 14px 0 18px 0;
+    padding: 10px; /* Espacio interno para que no toque los bordes */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* BUTTONS */
@@ -302,8 +300,7 @@ html {
     }
 
     .section-image {
-        width: 90%;
-        max-width: none;
+        width: 80%;
     }
 
     .horizontal-scroll {
@@ -320,14 +317,16 @@ html {
     }
 
     .horizontal-scroll .alojamiento {
-        flex: 0 0 280px;
+        flex: 0 0 260px;
         scroll-snap-align: center;
         position: relative;
         text-align: center;
     }
 
     .alojamiento-img {
-        height: 160px;
+        height: 180px; /* En móvil un poco más alta también */
+        object-fit: contain;
+        padding: 8px;
     }
 
     .horizontal-scroll .alojamiento::after {
@@ -365,35 +364,15 @@ html {
         padding: 0 20px;
         font-size: 1rem;
     }
-}
-
-/* HERO – AJUSTES PORTADA MÓVIL */
-@media (max-width: 768px) {
 
     .hero {
+        height: 60vh;
+        background-position: center 20%;
         justify-content: flex-start;
         padding-top: 55px;
-        background-position: center 18%;
-
         align-items: flex-end;
         text-align: right;
         padding-right: 20px;
-
         transform: translateY(-12px);
-    }
-
-    .hero-names {
-        font-size: 2.6rem;
-        color: #000;
-        margin-top: 0;
-        margin-bottom: 4px;
-        text-shadow: none;
-    }
-
-    .hero-range {
-        margin-top: -6px;
-        font-size: 0.95rem;
-        color: #000;
-        text-shadow: none;
     }
 }
