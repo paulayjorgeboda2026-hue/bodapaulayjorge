@@ -227,7 +227,15 @@ details summary {
 footer {
     background: var(--beige);
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+footer p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
 }
 
 /* ANIMATION */
@@ -358,6 +366,14 @@ html {
 
     .scroll-indicator {
         display: block;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+
+    footer p {
+        font-size: 1rem;
     }
 }
 
