@@ -5,14 +5,12 @@
     --fondo: #faf7f2;
     --destacado: #fef7f5;
 }
-
 body {
     margin: 0;
     font-family: Georgia, serif;
     background: var(--fondo);
     color: #333;
 }
-
 /* MENU */
 .menu {
     position: fixed;
@@ -21,7 +19,6 @@ body {
     background: var(--beige);
     z-index: 1000;
 }
-
 .menu-inner {
     max-width: 1000px;
     margin: auto;
@@ -30,30 +27,25 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 .menu ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
-
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
 .menu a.active {
     border-bottom: 2px solid white;
     padding-bottom: 3px;
 }
-
 .menu-right {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 .lang button {
     background: none;
     border: none;
@@ -61,14 +53,12 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-
 .burger {
     display: none;
     font-size: 1.8rem;
     color: white;
     cursor: pointer;
 }
-
 /* CONTAINER */
 .container {
     max-width: 1000px;
@@ -76,7 +66,6 @@ body {
     padding-top: 100px;
     text-align: center;
 }
-
 /* HERO */
 .hero {
     height: 70vh;
@@ -91,7 +80,6 @@ body {
     padding-right: 40px;
     transform: translateY(-20px);
 }
-
 .hero-names {
     font-family: 'Playfair Display', serif;
     font-size: 2.6rem;
@@ -101,7 +89,6 @@ body {
     text-shadow: none;
     max-width: 420px;
 }
-
 .hero-range {
     margin-top: -6px;
     font-size: 0.95rem;
@@ -109,18 +96,15 @@ body {
     text-shadow: none;
     max-width: 420px;
 }
-
 /* SECTIONS */
 .section {
     margin: 60px auto;
     padding: 30px 20px;
 }
-
 .section h2 {
     color: var(--marron);
     font-size: 2rem;
 }
-
 .section-divider {
     width: 120px;
     height: 1px;
@@ -128,7 +112,6 @@ body {
     margin: 60px auto;
     opacity: 0.4;
 }
-
 /* DESTACADO */
 .destacado {
     background: var(--destacado);
@@ -136,14 +119,12 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     padding-bottom: 55px;
 }
-
 /* IMAGES - Preboda y boda como al principio */
 .section-image {
     width: 55%;
     max-width: 420px;
     margin-top: 20px;
 }
-
 /* BODA - Sin cambios */
 .boda-columnas {
     display: flex;
@@ -151,20 +132,17 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 }
-
 .boda-img-wrapper {
     height: 260px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .boda-img-wrapper img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
-
 /* ALOJAMIENTOS - Volvemos al estilo original */
 .alojamiento-img {
     width: 100%;
@@ -173,7 +151,6 @@ body {
     border-radius: 10px;
     margin: 14px 0 18px 0;
 }
-
 /* BUTTONS */
 .btn {
     display: inline-block;
@@ -186,13 +163,11 @@ body {
     font-weight: bold;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .btn:hover {
     background: var(--beige-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
-
 /* MAP */
 iframe {
     width: 100%;
@@ -201,27 +176,23 @@ iframe {
     border-radius: 10px;
     margin: 20px 0;
 }
-
 /* COUNTDOWN */
 #countdown {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-
 #countdown span {
     font-size: 2rem;
     color: var(--marron);
     display: block;
 }
-
 /* FOOTER */
 footer {
     background: var(--beige);
     padding: 50px 20px;
     text-align: center;
 }
-
 .footer-text {
     max-width: 800px;
     margin: 0 auto;
@@ -229,28 +200,25 @@ footer {
     line-height: 1.7;
     font-size: 1.05rem;
 }
-
 .footer-text p {
-    margin: 20px 0;
+    margin: 20px auto;
+    text-align: center;          /* ← ÚNICO CAMBIO */
+    max-width: 720px;
 }
-
 /* ANIMATION */
 .reveal {
     opacity: 0;
     transform: translateY(25px);
     transition: 0.8s;
 }
-
 .reveal.active {
     opacity: 1;
     transform: none;
 }
-
 /* SCROLL */
 html {
     scroll-behavior: smooth;
 }
-
 /* ALOJAMIENTOS – DESKTOP */
 .alojamiento {
     background: white;
@@ -258,7 +226,6 @@ html {
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-
 /* INDICADOR DESLIZA */
 .scroll-indicator {
     display: none;
@@ -268,7 +235,6 @@ html {
     margin-top: 10px;
     letter-spacing: 1px;
 }
-
 /* MOBILE */
 @media (max-width: 768px) {
     .menu ul {
@@ -280,23 +246,18 @@ html {
         justify-content: center;
         gap: 25px;
     }
-
     body.menu-open .menu ul {
         display: flex;
     }
-
     .burger {
         display: block;
     }
-
     #countdown {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .section-image {
         width: 80%;
     }
-
     .horizontal-scroll {
         display: flex !important;
         flex-direction: row !important;
@@ -309,18 +270,15 @@ html {
         -webkit-overflow-scrolling: touch;
         text-align: left;
     }
-
     .horizontal-scroll .alojamiento {
         flex: 0 0 260px;
         scroll-snap-align: center;
         position: relative;
         text-align: center;
     }
-
     .alojamiento-img {
         height: 140px;
     }
-
     .horizontal-scroll .alojamiento::after {
         content: "";
         position: absolute;
@@ -330,33 +288,26 @@ html {
         height: 70%;
         background: rgba(176, 131, 111, 0.35);
     }
-
     .horizontal-scroll .alojamiento:last-child::after {
         display: none;
     }
-
     .horizontal-scroll::-webkit-scrollbar {
         height: 8px;
     }
-
     .horizontal-scroll::-webkit-scrollbar-thumb {
         background: var(--beige);
         border-radius: 10px;
     }
-
     .horizontal-scroll::-webkit-scrollbar-track {
         background: transparent;
     }
-
     .scroll-indicator {
         display: block;
     }
-
     .footer-text {
         padding: 0 20px;
         font-size: 1rem;
     }
-
     .hero {
         height: 60vh;
         background-position: center 20%;
@@ -377,18 +328,13 @@ html {
     text-align: justify;
     hyphens: auto;
 }
-
-.footer-text p {
-    text-align: justify;
-    hyphens: auto;
-    line-height: 1.6;
-    margin: 25px auto;
-    max-width: 800px;
+    .footer-text p {
+        text-align: center;      /* también en móvil */
+    }
 }
-
 @media (max-width: 768px) {
     .texto-alojamiento-intro,
     .footer-text p {
-        text-align: left;  /* más legible en móvil */
+        text-align: center;      /* más legible y centrado también en móvil */
     }
 }
