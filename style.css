@@ -374,11 +374,21 @@ html {
     line-height: 1.55;
     color: #444;
     padding: 0 20px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.footer-text p {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.6;
+    margin: 25px auto;
+    max-width: 800px;
 }
 
 @media (max-width: 768px) {
-    .texto-alojamiento-intro {
-        font-size: 1.02rem;
-        margin: 16px auto 28px auto;
+    .texto-alojamiento-intro,
+    .footer-text p {
+        text-align: left;  /* más legible en móvil */
     }
 }
