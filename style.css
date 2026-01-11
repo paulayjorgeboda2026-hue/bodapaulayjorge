@@ -367,4 +367,18 @@ html {
         padding-right: 20px;
         transform: translateY(-12px);
     }
+    .texto-alojamiento-intro {
+    max-width: 720px;
+    margin: 20px auto 32px auto;
+    font-size: 1.08rem;
+    line-height: 1.55;
+    color: #444;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .texto-alojamiento-intro {
+        font-size: 1.02rem;
+        margin: 16px auto 28px auto;
+    }
 }
